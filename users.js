@@ -150,4 +150,4 @@ let users = [
   }
 ];
 
-export default {users};
+export {users};

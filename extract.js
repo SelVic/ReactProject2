@@ -1,27 +1,32 @@
 import React, {Component, Fragment} from "react";
 import {render} from 'react-dom';
-import users from "users.js";
+import {users} from "users.js";
 
-const u = users;
+let u = [users];
 
 class Extract extends Component {
     render() {
-        let {users} = this.props;
-        return <Fragment>
+        let u=this.props;
+        return (
+            <Fragment>
             <ul>
                 {
-                    users.map((item, i) => <li key={i}>{item.login} {item.id} {item.avatar_url}</li>)
+                    u.map((l , i) => <li key={i}>{l.login} {l.id} {l.avatar_url}</li>)
                 }
             </ul>
-        </Fragment>;
+        </Fragment>
+        )
     }
 }
-
-
+const Test = () => (
+    <div>Hello</div>
+);
 //export {Extract}
 
 
-render(
+/*render(
     <Extract users={users}/>,
     document.querySelector('#users')
-);
+);*/
+
+export {Test}
