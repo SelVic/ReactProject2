@@ -90,17 +90,17 @@
 /*!********************!*\
   !*** ./extract.js ***!
   \********************/
-/*! exports provided: Test */
+/*! exports provided: Extract */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Test", function() { return Test; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Extract", function() { return Extract; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'users.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _users_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./users.js */ "./users.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -122,22 +122,70 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var u = [!(function webpackMissingModule() { var e = new Error("Cannot find module 'users.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())];
+var u = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"];
 
-var Extract = /*#__PURE__*/function (_Component) {
-  _inherits(Extract, _Component);
+var MyElement = /*#__PURE__*/function (_Component) {
+  _inherits(MyElement, _Component);
+
+  function MyElement() {
+    _classCallCheck(this, MyElement);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(MyElement).apply(this, arguments));
+  }
+
+  _createClass(MyElement, [{
+    key: "render",
+    value: function render() {
+      var url = this.props.url;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "123"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        src: url
+      }));
+    }
+  }]);
+
+  return MyElement;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+var Extract = /*#__PURE__*/function (_Component2) {
+  _inherits(Extract, _Component2);
 
   function Extract() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, Extract);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Extract).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Extract)).call.apply(_getPrototypeOf2, [this].concat(args)));
+
+    _this.foo = function (url) {
+      var a = 'blablbabl';
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, a, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        width: 45,
+        height: 45,
+        src: url
+      }));
+    };
+
+    return _this;
   }
 
   _createClass(Extract, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log(_users_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
+    }
+  }, {
     key: "render",
     value: function render() {
-      var u = this.props;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, u.map(function (l, i) {
+      //const u = this.props;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "testFragment"), this.foo('https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyElement, {
+        url: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg'
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, u.map(function (l, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: i
         }, l.login, " ", l.id, " ", l.avatar_url);
@@ -150,15 +198,14 @@ var Extract = /*#__PURE__*/function (_Component) {
 
 var Test = function Test() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hello");
-}; //export {Extract}
+};
+
 
 /*render(
     <Extract users={users}/>,
     document.querySelector('#users')
 );*/
-
-
-
+// export {Test}
 
 /***/ }),
 
@@ -295,7 +342,7 @@ var Page11 = function Page11() {
 };
 
 var Page2 = function Page2() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_extract_js__WEBPACK_IMPORTED_MODULE_4__["Test"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_extract_js__WEBPACK_IMPORTED_MODULE_4__["Extract"], null));
 };
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.querySelector("#root"));
@@ -31579,6 +31626,140 @@ var Cycle1 = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./users.js":
+/*!******************!*\
+  !*** ./users.js ***!
+  \******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var users = [{
+  "login": "mojombo",
+  "id": 1,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4"
+}, {
+  "login": "defunkt",
+  "id": 2,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4"
+}, {
+  "login": "pjhyett",
+  "id": 3,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/3?v=4"
+}, {
+  "login": "wycats",
+  "id": 4,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/4?v=4"
+}, {
+  "login": "ezmobius",
+  "id": 5,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/5?v=4"
+}, {
+  "login": "ivey",
+  "id": 6,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/6?v=4"
+}, {
+  "login": "evanphx",
+  "id": 7,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/7?v=4"
+}, {
+  "login": "vanpelt",
+  "id": 17,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/17?v=4"
+}, {
+  "login": "wayneeseguin",
+  "id": 18,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/18?v=4"
+}, {
+  "login": "brynary",
+  "id": 19,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/19?v=4"
+}, {
+  "login": "kevinclark",
+  "id": 20,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/20?v=4"
+}, {
+  "login": "technoweenie",
+  "id": 21,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/21?v=4"
+}, {
+  "login": "macournoyer",
+  "id": 22,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/22?v=4"
+}, {
+  "login": "takeo",
+  "id": 23,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/23?v=4"
+}, {
+  "login": "caged",
+  "id": 25,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/25?v=4"
+}, {
+  "login": "topfunky",
+  "id": 26,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/26?v=4"
+}, {
+  "login": "anotherjesse",
+  "id": 27,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/27?v=4"
+}, {
+  "login": "roland",
+  "id": 28,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/28?v=4"
+}, {
+  "login": "lukas",
+  "id": 29,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/29?v=4"
+}, {
+  "login": "fanvsfan",
+  "id": 30,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/30?v=4"
+}, {
+  "login": "tomtt",
+  "id": 31,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/31?v=4"
+}, {
+  "login": "railsjitsu",
+  "id": 32,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/32?v=4"
+}, {
+  "login": "nitay",
+  "id": 34,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/34?v=4"
+}, {
+  "login": "kevwil",
+  "id": 35,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/35?v=4"
+}, {
+  "login": "KirinDave",
+  "id": 36,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/36?v=4"
+}, {
+  "login": "jamesgolick",
+  "id": 37,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/37?v=4"
+}, {
+  "login": "atmos",
+  "id": 38,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/38?v=4"
+}, {
+  "login": "errfree",
+  "id": 44,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/44?v=4"
+}, {
+  "login": "mojodna",
+  "id": 45,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/45?v=4"
+}, {
+  "login": "bmizerany",
+  "id": 46,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/46?v=4"
+}];
+/* harmony default export */ __webpack_exports__["default"] = (users);
 
 /***/ })
 

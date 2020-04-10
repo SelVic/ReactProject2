@@ -2,7 +2,7 @@ import React, {Fragment, Component} from "react";
 import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import {Cycle1} from "./timer.js";
-import {Test} from "./extract.js";
+import {Extract} from "./extract.js";
 
 
 /*<Link to="/">Home</Link>{" "}
@@ -85,7 +85,7 @@ const Page11 = () => (
 const Page2 = () => (
     <div>
         <h2>Пользователи</h2>
-        <Test/>
+        <Extract/>
     </div>
 );
 

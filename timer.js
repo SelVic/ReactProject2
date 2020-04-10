@@ -15,7 +15,7 @@ class Cycle1 extends Component {
     };
 
     render() {
-        let {seconds} = this.state;
+        const {seconds} = this.state;
         return (
             <Fragment>
                 <div> {this.state.seconds}.</div>
