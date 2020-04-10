@@ -1,0 +1,67 @@
+.myFont1{
+    font-size: 25px;
+    font-weight: bold;
+    font-style: italic;
+}
+.myFont2{
+    font-size: 30px;
+    color: brown;
+    font-weight: bolder;
+    font-style: initial;
+}
+.Spacing1{
+    word-spacing: 400px;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    margin: 0;
+    color: #444;
+}
+
+html, body, #root {
+    min-height: 100vh;
+}
+
+.header {
+    background-color: #FFA500;
+}
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+#root {
+    display: grid;
+    grid-template-rows: 60px 1fr 60px;
+}
+
+.header-item {
+    display: inline-block;
+    line-height: 60px;
+    color: black;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.header-item.brand {
+    margin-right: 15px;
+}
+
+.header-item:not(.brand) {
+    padding: 0 20px;
+}
+
+.header-item:not(.brand):hover {
+    background-color: #C2554F;
+}
+
+.footer {
+    background-color: #FFA500;
+    line-height: 60px;
+    color: black;
+    font-weight: bolder;
+}
