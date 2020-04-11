@@ -122,7 +122,6 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var u = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"];
 
 var MyElement = /*#__PURE__*/function (_Component) {
   _inherits(MyElement, _Component);
@@ -137,7 +136,7 @@ var MyElement = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       var url = this.props.url;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "123"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: url
       }));
     }
@@ -162,11 +161,10 @@ var Extract = /*#__PURE__*/function (_Component2) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Extract)).call.apply(_getPrototypeOf2, [this].concat(args)));
 
-    _this.foo = function (url) {
-      var a = 'blablbabl';
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, a, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        width: 45,
-        height: 45,
+    _this.imagebox = function (url) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        width: 60,
+        height: 60,
         src: url
       }));
     };
@@ -176,19 +174,16 @@ var Extract = /*#__PURE__*/function (_Component2) {
 
   _createClass(Extract, [{
     key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log(_users_js__WEBPACK_IMPORTED_MODULE_2__["default"]);
-    }
+    value: function componentDidMount() {}
   }, {
     key: "render",
     value: function render() {
-      //const u = this.props;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "testFragment"), this.foo('https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(MyElement, {
-        url: 'https://vscode.ru/wp-content/uploads/2017/11/hello-world.jpg'
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, u.map(function (l, i) {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (user, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: i
-        }, l.login, " ", l.id, " ", l.avatar_url);
+        }, user.login, " ", user.id, " ", _this2.imagebox(user.avatar_url));
       })));
     }
   }]);
@@ -196,16 +191,7 @@ var Extract = /*#__PURE__*/function (_Component2) {
   return Extract;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-var Test = function Test() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hello");
-};
 
-
-/*render(
-    <Extract users={users}/>,
-    document.querySelector('#users')
-);*/
-// export {Test}
 
 /***/ }),
 
