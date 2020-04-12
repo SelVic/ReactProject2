@@ -47,7 +47,7 @@ class App extends Component {
                             <Page11 path="/page1" />
                             <Page2 path="/page2" />
                         </Router>
-                    </div>
+                        </div>
                 </div>
                 <div className="footer">
                     <div className="container">
