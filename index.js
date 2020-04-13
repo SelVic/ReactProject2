@@ -37,6 +37,7 @@ class App extends Component {
                         <a className="header-item" ><Link to="/">Home</Link>{" "}</a>
                         <a className="header-item" ><Link to="/page1">Счетчик</Link>{" "}</a>
                         <a className="header-item" ><Link to="/page2">Пользователи</Link>{" "}</a>
+                        <a className="header-item" ><Link to="/page3">Карта</Link>{" "}</a>
                     </div>
                 </div>
                 <div className="content">
@@ -46,6 +47,7 @@ class App extends Component {
                             <Home path="/" />
                             <Page11 path="/page1" />
                             <Page2 path="/page2" />
+                            <Page3 path="/page3" />
                         </Router>
                         </div>
                 </div>
@@ -88,5 +90,12 @@ const Page2 = () => (
         <Extract/>
     </div>
 );
+
+const Page3 = () => (
+    <div>
+        <h2>Карта</h2>
+        <div id="map" style="width: 600px; height: 400px"></div>
+    </div>
+)
 
 render(<App/>, document.querySelector("#root"));

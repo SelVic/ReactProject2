@@ -287,7 +287,11 @@ var App = /*#__PURE__*/function (_Component) {
         className: "header-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         to: "/page2"
-      }, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), " "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "header-item"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/page3"
+      }, "\u041A\u0430\u0440\u0442\u0430"), " "))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "content"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -297,6 +301,8 @@ var App = /*#__PURE__*/function (_Component) {
         path: "/page1"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Page2, {
         path: "/page2"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Page3, {
+        path: "/page3"
       })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "footer"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -329,6 +335,13 @@ var Page11 = function Page11() {
 
 var Page2 = function Page2() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_extract_js__WEBPACK_IMPORTED_MODULE_4__["Extract"], null));
+};
+
+var Page3 = function Page3() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u041A\u0430\u0440\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    id: "map",
+    style: "width: 600px; height: 400px"
+  }));
 };
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.querySelector("#root"));
