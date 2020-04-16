@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import {Cycle1} from "./timer.js";
 import {Extract} from "./extract.js";
-
+//
 //
 /*<Link to="/">Home</Link>{" "}
 <Link to="/page1">Счетчик</Link>{" "}
