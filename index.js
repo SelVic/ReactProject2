@@ -7,8 +7,6 @@ import {Maps} from "./map";
 //удалить с гитхаба папки, не удаляя их с локального диска
 //{...props} почитать про spread на learnjs
 
-//
-//
 /*<Link to="/">Home</Link>{" "}
 <Link to="/page1">Счетчик</Link>{" "}
 <Link to="/page2">Пользователи</Link>
@@ -110,7 +108,7 @@ const Page2 = () => (
 // }
 const Page3 = () => (
     <div>
-        <div>Карта</div>
+        <div>Карта2</div>
         <Maps/>
     </div>
 )
