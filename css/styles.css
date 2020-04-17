@@ -69,3 +69,17 @@ html, body, #root {
 .gridClass {
 
 }
+
+.users-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.user-item{
+    width: 30%;
+}
+
+.mapSize{
+    height: 600px;
+    weight: 600px;
+}

@@ -2,19 +2,19 @@ import React, {Component, Fragment} from "react";
 import {render} from 'react-dom';
 import users from "./users.js";
 
-
-class MyElement extends Component {
-
-    render(){
-        const {url}= this.props
-        return(
-            <div>
-                <img src={url}></img>
-            </div>
-        )
-    }
-
-}
+//
+// class MyElement extends Component {
+//
+//     render(){
+//         const {url}= this.props
+//         return(
+//             <div>
+//                 <img src={url}></img>
+//             </div>
+//         )
+//     }
+//
+// }
 
 class Extract extends Component {
 
@@ -31,13 +31,11 @@ class Extract extends Component {
 
     render() {
         return (
-            <Fragment>
-                <ul>
+                <div className='users-list'>
                     {
-                        users.map((user , i) => <li key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</li>)
+                        users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
                     }
-                </ul>
-            </Fragment>
+                </div>
         )
     }
 }
