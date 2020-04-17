@@ -6,6 +6,9 @@ import {Extract} from "./extract.js";
 import {Maps} from "./map";
 //удалить с гитхаба папки, не удаляя их с локального диска
 //{...props} почитать про spread на learnjs
+
+//
+//
 /*<Link to="/">Home</Link>{" "}
 <Link to="/page1">Счетчик</Link>{" "}
 <Link to="/page2">Пользователи</Link>
