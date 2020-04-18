@@ -15,7 +15,8 @@ import users from "./users.js";
 //     }
 //
 // }
-
+let text = null;
+let userId = users.id;
 class Extract extends Component {
 
     componentDidMount() {
@@ -28,9 +29,10 @@ class Extract extends Component {
             </div>
         )
     }
-
+text = this.props;
     render() {
         return (
+                <div> <input className = "containerSize" type="text" value = {text}/> <div>
                 <div className='users-list'>
                     {
                         users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)

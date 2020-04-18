@@ -5793,6 +5793,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 //
 // }
 
+var userId = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].id;
+
 var Extract = /*#__PURE__*/function (_Component) {
   _inherits(Extract, _Component);
 
@@ -6002,7 +6004,7 @@ var Page2 = function Page2() {
 
 
 var Page3 = function Page3() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u041A\u0430\u0440\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_map__WEBPACK_IMPORTED_MODULE_5__["Maps"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u041A\u0430\u0440\u0442\u04302"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_map__WEBPACK_IMPORTED_MODULE_5__["Maps"], null));
 };
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.querySelector("#root"));
