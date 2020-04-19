@@ -15,12 +15,24 @@ import users from "./users.js";
 //     }
 //
 // }
-let text = null;
+
 let userId = users.id;
 class Extract extends Component {
-
+    state = {
+    text: ""
+    };
     componentDidMount() {
-    }
+    };
+
+    // updateText = (text) => {
+    //     let searchLogin = text.trim().toLowerCase();
+    //     if (searchLogin)
+    //         this.setState({
+    //             text: searchLogin,
+    //             filtered: users.filter(user => user.login.includes(searchLogin))
+    //         })
+    // }
+
 
     imagebox = (url)=>{
         return(
@@ -28,20 +40,25 @@ class Extract extends Component {
                 <img width={60} height={60} src={url} />
             </div>
         )
-    }
-text = this.props;
+    };
+
+
+
     render() {
+        let text = this.state;
         return (
-                <div> <input className = "containerSize" type="text" value = {text}/> <div>
+            <div className="container">
+                <div><input className="form-size" type="text" value={text} onChange={}/></div>
                 <div className='users-list'>
                     {
                         users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
                     }
                 </div>
+            </div>
         )
     }
 }
 
-export {Extract}
+export {Extract};
 
 
