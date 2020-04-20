@@ -20,7 +20,7 @@ class Cycle1 extends Component {
             <Fragment>
                 <div> {this.state.seconds}.</div>
                 {seconds > this.x && <div>Счетчик больше Х</div>}
-                <button onClick={this.reset}>Reset</button>
+                <button className="button8" onClick={this.reset}>Reset</button>
             </Fragment>
         )
     }

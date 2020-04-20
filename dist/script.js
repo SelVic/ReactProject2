@@ -86,6 +86,39 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./User.jsx":
+/*!******************!*\
+  !*** ./User.jsx ***!
+  \******************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var User = function User(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "user"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "foto"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.user.avatar_url,
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "name"
+  }, props.user.login)));
+};
+
+
+
+/***/ }),
+
 /***/ "./countries.js":
 /*!**********************!*\
   !*** ./countries.js ***!
@@ -5749,9 +5782,92 @@ var countries = [{
   !*** ./extract.js ***!
   \********************/
 /*! exports provided: Extract */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\Users\\User\\WebstormProjects\\jstask2\\extract.js: JSX attributes must only be assigned a non-empty expression (51:84)\n\n\u001b[0m \u001b[90m 49 | \u001b[39m        \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m 50 | \u001b[39m            \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"container\"\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 51 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33minput\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m\"form-size\"\u001b[39m type\u001b[33m=\u001b[39m\u001b[32m\"text\"\u001b[39m value\u001b[33m=\u001b[39m{text} onChange\u001b[33m=\u001b[39m{}\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 52 | \u001b[39m                \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'users-list'\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 53 | \u001b[39m                    {\u001b[0m\n\u001b[0m \u001b[90m 54 | \u001b[39m                        users\u001b[33m.\u001b[39mmap((user \u001b[33m,\u001b[39m i) \u001b[33m=>\u001b[39m \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'user-item'\u001b[39m key\u001b[33m=\u001b[39m{i}\u001b[33m>\u001b[39m{user\u001b[33m.\u001b[39mlogin} {user\u001b[33m.\u001b[39mid} {\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mimagebox(user\u001b[33m.\u001b[39mavatar_url)}\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mdiv\u001b[39m\u001b[33m>\u001b[39m)\u001b[0m\n    at Object._raise (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:723:17)\n    at Object.raiseWithData (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:716:17)\n    at Object.raise (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:710:17)\n    at Object.jsxParseAttributeValue (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4364:16)\n    at Object.jsxParseAttribute (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4412:44)\n    at Object.jsxParseOpeningElementAfterName (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4432:28)\n    at Object.jsxParseOpeningElementAt (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4425:17)\n    at Object.jsxParseElementAt (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4457:33)\n    at Object.jsxParseElementAt (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4473:32)\n    at Object.jsxParseElementAt (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4473:32)\n    at Object.jsxParseElement (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4531:17)\n    at Object.parseExprAtom (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4538:19)\n    at Object.parseExprSubscripts (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9451:23)\n    at Object.parseMaybeUnary (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9431:21)\n    at Object.parseExprOps (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9301:23)\n    at Object.parseMaybeConditional (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9274:23)\n    at Object.parseMaybeAssign (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9229:21)\n    at Object.parseParenAndDistinguishExpression (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:10006:28)\n    at Object.parseExprAtom (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9786:21)\n    at Object.parseExprAtom (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:4543:20)\n    at Object.parseExprSubscripts (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9451:23)\n    at Object.parseMaybeUnary (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9431:21)\n    at Object.parseExprOps (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9301:23)\n    at Object.parseMaybeConditional (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9274:23)\n    at Object.parseMaybeAssign (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9229:21)\n    at Object.parseExpression (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:9181:23)\n    at Object.parseReturnStatement (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:11249:28)\n    at Object.parseStatementContent (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:10930:21)\n    at Object.parseStatement (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:10882:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\Users\\User\\WebstormProjects\\jstask2\\node_modules\\@babel\\parser\\lib\\index.js:11456:25)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Extract", function() { return Extract; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _users_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./users.js */ "./users.js");
+/* harmony import */ var _User_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./User.jsx */ "./User.jsx");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+ // let userId = users.id;
+
+var Extract = /*#__PURE__*/function (_Component) {
+  _inherits(Extract, _Component);
+
+  function Extract() {
+    _classCallCheck(this, Extract);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Extract).apply(this, arguments));
+  }
+
+  _createClass(Extract, [{
+    key: "componentDidMount",
+    // state = {
+    // text: ""
+    // };
+    value: function componentDidMount() {}
+  }, {
+    key: "render",
+    // updateText = (text) => {
+    //     let searchLogin = text.trim().toLowerCase();
+    //     if (searchLogin)
+    //         this.setState({
+    //             text: searchLogin,
+    //             filtered: users.filter(user => user.login.includes(searchLogin))
+    //         })
+    // }
+    // imagebox = (url)=>{
+    //     return(
+    //         <div>
+    //             <img width={60} height={60} src={url} />
+    //         </div>
+    //     )
+    // };
+    value: function render() {
+      // let text = this.state;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "users"
+      }, // users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
+      _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (user, i) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User_jsx__WEBPACK_IMPORTED_MODULE_3__["User"], {
+          key: user.id,
+          user: user
+        });
+      })));
+    }
+  }]);
+
+  return Extract;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
 
 /***/ }),
 
@@ -5795,31 +5911,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- //удалить с гитхаба папки, не удаляя их с локального диска
-//{...props} почитать про spread на learnjs
 
-/*<Link to="/">Home</Link>{" "}
-<Link to="/page1">Счетчик</Link>{" "}
-<Link to="/page2">Пользователи</Link>
-*/
-
-/*const App = () => (
-    <Fragment>
-    <div className="header">
-        <div className="container">
-            <div className="header-item brand">JSREACT2</div>
-            <a className="header-item" ><Link to="/">Home</Link>{" "}</a>
-            <a className="header-item" ><Link to="/page1">Счетчик</Link>{" "}</a>
-            <a className="header-item" ><Link to="/page2">Пользователи</Link></a>
-        </div>
-        <Router>
-            <Home path="/" />
-            <Page11 path="/page1" />
-            <Page2 path="/page2" />
-        </Router>
-    </div>
-    </Fragment>
-);*/
 
 var App = /*#__PURE__*/function (_Component) {
   _inherits(App, _Component);
@@ -5839,7 +5931,7 @@ var App = /*#__PURE__*/function (_Component) {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-item brand"
-      }, "JSREACT2"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "JSREACT2 :   "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
         className: "header-item",
         to: "/"
       }, "Home"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
@@ -5873,45 +5965,44 @@ var App = /*#__PURE__*/function (_Component) {
 
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-/*const img1 = new Image();
-img1.src="/images/Pic1.jpg";*/
-
 
 function Home() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container"
+    className: "jumbo flex-row-center"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "jumbotron"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "\u0410\u043F\u0435\u043B\u044C\u0441\u0438\u043D\u044B \u0441 \u043C\u043E\u043B\u043E\u043A\u043E\u043C"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "myFont1"
-  }, "\u041E\u0442\u043B\u0438\u0447\u043D\u044B\u0439 \u0441\u0442\u0430\u0440\u0442 \u0434\u043D\u044F!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "images/Pic2.jpg"
-  }))));
-}
+    className: "jumbo-Container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "jumbo-title"
+  }, "Home page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "jumbo-text"
+  }, "\u0411\u0430\u043B\u043E\u0432\u0441\u0442\u0432\u043E \u0441 CSS")));
+} //
+// const Page11 = () => (
+//     <div className='time-backgr'>
+//         Счетчик
+//         <Cycle1/>
+//     </div>
+// );
 
-var Page11 = function Page11() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u0421\u0447\u0435\u0442\u0447\u0438\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_timer_js__WEBPACK_IMPORTED_MODULE_3__["Cycle1"], null));
-};
+
+function Page11() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "time-backgr flex-row-center"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jumbo-Container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "timer-Title"
+  }, "\u0421\u0447\u0435\u0442\u0447\u0438\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "timer-text"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_timer_js__WEBPACK_IMPORTED_MODULE_3__["Cycle1"], null))));
+}
 
 var Page2 = function Page2() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_extract_js__WEBPACK_IMPORTED_MODULE_4__["Extract"], null));
-}; // function Page3 () {
-//     return (
-//         <div className="container">
-//             <div className="jumbotron">
-//                 <h1>Карта</h1>
-//                 <p className="myFont1">Справочник по географии</p>
-//                 {/*<div id="map"></div>*/}
-//                 {/*<a><renderMap/></a>*/}
-//             </div>
-//             <Maps/>
-//         </div>
-//     )
-// }
-
+};
 
 var Page3 = function Page3() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u041A\u0430\u0440\u0442\u04302"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_map__WEBPACK_IMPORTED_MODULE_5__["Maps"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u041A\u0430\u0440\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_map__WEBPACK_IMPORTED_MODULE_5__["Maps"], null));
 };
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.querySelector("#root"));
@@ -37290,6 +37381,7 @@ var Cycle1 = /*#__PURE__*/function (_Component) {
     value: function render() {
       var seconds = this.state.seconds;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, " ", this.state.seconds, "."), seconds > this.x && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u0421\u0447\u0435\u0442\u0447\u0438\u043A \u0431\u043E\u043B\u044C\u0448\u0435 \u0425"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "button8",
         onClick: this.reset
       }, "Reset"));
     }
@@ -37299,6 +37391,141 @@ var Cycle1 = /*#__PURE__*/function (_Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
 
+
+/***/ }),
+
+/***/ "./users.js":
+/*!******************!*\
+  !*** ./users.js ***!
+  \******************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var users = [{
+  "login": "mojombo",
+  "id": 1,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4"
+}, {
+  "login": "defunkt",
+  "id": 2,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/2?v=4"
+}, {
+  "login": "pjhyett",
+  "id": 3,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/3?v=4"
+}, {
+  "login": "wycats",
+  "id": 4,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/4?v=4"
+}, {
+  "login": "ezmobius",
+  "id": 5,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/5?v=4"
+}, {
+  "login": "ivey",
+  "id": 6,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/6?v=4"
+}, {
+  "login": "evanphx",
+  "id": 7,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/7?v=4"
+}, {
+  "login": "vanpelt",
+  "id": 17,
+  "avatar_url": "https://avatars1.githubusercontent.com/u/17?v=4"
+}, {
+  "login": "wayneeseguin",
+  "id": 18,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/18?v=4"
+}, {
+  "login": "brynary",
+  "id": 19,
+  "avatar_url": "https://avatars0.githubusercontent.com/u/19?v=4"
+}, {
+  "login": "kevinclark",
+  "id": 20,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/20?v=4"
+}, {
+  "login": "technoweenie",
+  "id": 21,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/21?v=4"
+}, {
+  "login": "macournoyer",
+  "id": 22,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/22?v=4"
+}, {
+  "login": "takeo",
+  "id": 23,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/23?v=4"
+}, {
+  "login": "caged",
+  "id": 25,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/25?v=4"
+}, {
+  "login": "topfunky",
+  "id": 26,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/26?v=4"
+}, {
+  "login": "anotherjesse",
+  "id": 27,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/27?v=4"
+}, {
+  "login": "roland",
+  "id": 28,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/28?v=4"
+}, {
+  "login": "lukas",
+  "id": 29,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/29?v=4"
+}, {
+  "login": "fanvsfan",
+  "id": 30,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/30?v=4"
+}, {
+  "login": "tomtt",
+  "id": 31,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/31?v=4"
+}, {
+  "login": "railsjitsu",
+  "id": 32,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/32?v=4"
+}, {
+  "login": "nitay",
+  "id": 34,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/34?v=4"
+}, {
+  "login": "kevwil",
+  "id": 35,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/35?v=4"
+}, {
+  "login": "KirinDave",
+  "id": 36,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/36?v=4"
+}, {
+  "login": "jamesgolick",
+  "id": 37,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/37?v=4"
+}, {
+  "login": "atmos",
+  "id": 38,
+  "avatar_url": "https://avatars3.githubusercontent.com/u/38?v=4"
+}, {
+  "login": "errfree",
+  "id": 44,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/44?v=4"
+}, {
+  "login": "mojodna",
+  "id": 45,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/45?v=4"
+}, {
+  "login": "bmizerany",
+  "id": 46,
+  "avatar_url": "https://avatars2.githubusercontent.com/u/46?v=4"
+}]; // export default users;
+
+/* harmony default export */ __webpack_exports__["default"] = (users);
 
 /***/ })
 

@@ -1,0 +1,41 @@
+
+
+.users {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 230px 230px 230px 230px;
+  grid-gap: 130px;
+}
+
+.user {
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px 10px 40px 10px;
+  margin-bottom: 30px;
+}
+
+.user .foto {
+  display: flex;
+}
+
+.user img {
+  width: 208px;
+  height: 208px;
+}
+
+.user .name {
+  font-size: 25px;
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+}
+
+.user .info {
+  position: absolute;
+  background-color: indianred;
+  padding: 10px;
+  height: 20px;
+  width: calc(100% - 40px);
+  text-align: -webkit-center;
+  color: white;
+}

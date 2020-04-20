@@ -4,30 +4,6 @@ import { Router, Link } from "@reach/router";
 import {Cycle1} from "./timer.js";
 import {Extract} from "./extract.js";
 import {Maps} from "./map";
-//удалить с гитхаба папки, не удаляя их с локального диска
-//{...props} почитать про spread на learnjs
-
-/*<Link to="/">Home</Link>{" "}
-<Link to="/page1">Счетчик</Link>{" "}
-<Link to="/page2">Пользователи</Link>
-*/
-/*const App = () => (
-    <Fragment>
-    <div className="header">
-        <div className="container">
-            <div className="header-item brand">JSREACT2</div>
-            <a className="header-item" ><Link to="/">Home</Link>{" "}</a>
-            <a className="header-item" ><Link to="/page1">Счетчик</Link>{" "}</a>
-            <a className="header-item" ><Link to="/page2">Пользователи</Link></a>
-        </div>
-        <Router>
-            <Home path="/" />
-            <Page11 path="/page1" />
-            <Page2 path="/page2" />
-        </Router>
-    </div>
-    </Fragment>
-);*/
 
 class App extends Component {
     render() {
@@ -35,7 +11,7 @@ class App extends Component {
             <Fragment>
                 <div className="header">
                     <div className="container">
-                        <div className="header-item brand">JSREACT2</div>
+                        <div className="header-item brand">JSREACT2 :   </div>
                         <Link className="header-item" to="/">Home</Link>{" "}
                         <Link className="header-item" to="/page1">Счетчик</Link>{" "}
                         <Link className="header-item" to="/page2">Пользователи</Link>{" "}
@@ -63,52 +39,46 @@ class App extends Component {
     }
 }
 
-/*const img1 = new Image();
-img1.src="/images/Pic1.jpg";*/
-
 function Home(){
     return (
-        <div className="container">
-            <div className="jumbotron">
-                <h1>Апельсины с молоком</h1>
-                <p className="myFont1">Отличный старт дня!</p>
-                <span><img src="images/Pic2.jpg"/></span>
+        <div className="jumbo flex-row-center">
+            <div className="jumbo-Container">
+                <h1 className="jumbo-title">Home page</h1>
+                <p className="jumbo-text">Баловство с CSS</p>
             </div>
         </div>
-    );
+    )
 }
 
-
-const Page11 = () => (
-    <div>
-        <h2>Счетчик</h2>
-        <Cycle1/>
-    </div>
-);
-
+//
+// const Page11 = () => (
+//     <div className='time-backgr'>
+//         Счетчик
+//         <Cycle1/>
+//     </div>
+// );
+function Page11(){
+    return (
+        <div className="time-backgr flex-row-center">
+            <div className="jumbo-Container">
+                <h1 className="timer-Title">Счетчик</h1>
+                <p className="timer-text"><Cycle1/></p>
+            </div>
+        </div>
+    )
+}
 const Page2 = () => (
     <div>
         <h2>Пользователи</h2>
         <Extract/>
+        {/*<UsersPageAlt/>*/}
     </div>
 );
 
-// function Page3 () {
-//     return (
-//         <div className="container">
-//             <div className="jumbotron">
-//                 <h1>Карта</h1>
-//                 <p className="myFont1">Справочник по географии</p>
-//                 {/*<div id="map"></div>*/}
-//                 {/*<a><renderMap/></a>*/}
-//             </div>
-//             <Maps/>
-//         </div>
-//     )
-// }
+
 const Page3 = () => (
     <div>
-        <div>Карта2</div>
+        <div>Карта</div>
         <Maps/>
     </div>
 )

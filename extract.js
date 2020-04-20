@@ -1,26 +1,14 @@
 import React, {Component, Fragment} from "react";
 import {render} from 'react-dom';
 import users from "./users.js";
+import {User} from "./User.jsx";
 
-//
-// class MyElement extends Component {
-//
-//     render(){
-//         const {url}= this.props
-//         return(
-//             <div>
-//                 <img src={url}></img>
-//             </div>
-//         )
-//     }
-//
-// }
 
-let userId = users.id;
+// let userId = users.id;
 class Extract extends Component {
-    state = {
-    text: ""
-    };
+    // state = {
+    // text: ""
+    // };
     componentDidMount() {
     };
 
@@ -34,24 +22,25 @@ class Extract extends Component {
     // }
 
 
-    imagebox = (url)=>{
-        return(
-            <div>
-                <img width={60} height={60} src={url} />
-            </div>
-        )
-    };
+    // imagebox = (url)=>{
+    //     return(
+    //         <div>
+    //             <img width={60} height={60} src={url} />
+    //         </div>
+    //     )
+    // };
 
 
 
     render() {
-        let text = this.state;
+        // let text = this.state;
         return (
             <div className="container">
-                <div><input className="form-size" type="text" value={text} onChange={}/></div>
-                <div className='users-list'>
+                {/*<div><input className="form-size" type="text" value={text} onChange={}/></div>*/}
+                <div className='users'>
                     {
-                        users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
+                        // users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
+                        users.map((user, i) => <User key={user.id} user={user}/>)
                     }
                 </div>
             </div>
