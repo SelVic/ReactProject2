@@ -5820,39 +5820,47 @@ var Extract = /*#__PURE__*/function (_Component) {
   _inherits(Extract, _Component);
 
   function Extract() {
+    var _getPrototypeOf2;
+
+    var _this;
+
     _classCallCheck(this, Extract);
 
-    return _possibleConstructorReturn(this, _getPrototypeOf(Extract).apply(this, arguments));
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Extract)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.state = {
+      text: ""
+    };
+
+    _this.changeHandler = function (event) {
+      event.currentTarget.value;
+
+      _this.setState({
+        text: event.currentTarget.value
+      });
+    };
+
+    return _this;
   }
 
   _createClass(Extract, [{
     key: "componentDidMount",
-    // state = {
-    // text: ""
-    // };
     value: function componentDidMount() {}
   }, {
     key: "render",
-    // updateText = (text) => {
-    //     let searchLogin = text.trim().toLowerCase();
-    //     if (searchLogin)
-    //         this.setState({
-    //             text: searchLogin,
-    //             filtered: users.filter(user => user.login.includes(searchLogin))
-    //         })
-    // }
-    // imagebox = (url)=>{
-    //     return(
-    //         <div>
-    //             <img width={60} height={60} src={url} />
-    //         </div>
-    //     )
-    // };
+    //view
     value: function render() {
-      // let text = this.state;
+      var text1 = this.state.text;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "text",
+        value: text1,
+        onChange: this.changeHandler
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "users"
       }, // users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
       _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (user, i) {

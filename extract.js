@@ -6,9 +6,10 @@ import {User} from "./User.jsx";
 
 // let userId = users.id;
 class Extract extends Component {
-    // state = {
-    // text: ""
-    // };
+    //model
+    state = {
+        text: ""
+    };
     componentDidMount() {
     };
 
@@ -29,14 +30,17 @@ class Extract extends Component {
     //         </div>
     //     )
     // };
-
-
-
+//controller
+    changeHandler = (event) =>  {
+        event.currentTarget.value ;
+        this.setState({text: event.currentTarget.value});
+    };
+//view
     render() {
-        // let text = this.state;
+        let text1 = this.state.text;
         return (
             <div className="container">
-                {/*<div><input className="form-size" type="text" value={text} onChange={}/></div>*/}
+                <input type="text" value = {text1} onChange={this.changeHandler} />
                 <div className='users'>
                     {
                         // users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
