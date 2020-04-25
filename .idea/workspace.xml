@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ad3ebd67-5760-4f4e-8733-185d19565f6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract.js" beforeDir="false" afterPath="$PROJECT_DIR$/extract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Timer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/Timer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UsersPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/UsersPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,16 +50,16 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\WebstormProjects\jstask2\images" />
-      <recent name="C:\Users\User\WebstormProjects\jstask2" />
-      <recent name="C:\Users\User\WebstormProjects\jstask2\css" />
-      <recent name="C:\Users\User\WebstormProjects\jstask1" />
-      <recent name="C:\Users\User\WebstormProjects\untitled" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\WebstormProjects\jstask2\images" />
       <recent name="C:\Users\User\WebstormProjects\jstask2\css" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\jstask2" />
+      <recent name="C:\Users\User\WebstormProjects\jstask2\images" />
+      <recent name="C:\Users\User\WebstormProjects\jstask2\css" />
+      <recent name="C:\Users\User\WebstormProjects\jstask1" />
+      <recent name="C:\Users\User\WebstormProjects\untitled" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.testfile.js">
@@ -123,6 +123,8 @@
       <workItem from="1587305223319" duration="7040000" />
       <workItem from="1587396053286" duration="6092000" />
       <workItem from="1587406181881" duration="7287000" />
+      <workItem from="1587598414809" duration="98000" />
+      <workItem from="1587774135295" duration="114000" />
     </task>
     <servers />
   </component>
