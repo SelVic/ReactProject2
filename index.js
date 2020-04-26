@@ -5,6 +5,23 @@ import {Cycle1} from "./timer.js";
 import {Extract} from "./extract.js";
 import {Maps} from "./map";
 
+const NavLink = props => (
+    <Link
+        {...props}
+        getProps={({ isCurrent }) => {
+            // the object returned here is passed to the
+            // anchor element's props
+            return {
+                style: {
+                    color: isCurrent ? "red" : "blue"
+                }
+            };
+        }}
+    />
+);
+
+
+
 class App extends Component {
     render() {
         return (
@@ -12,10 +29,10 @@ class App extends Component {
                 <div className="header">
                     <div className="container">
                         <div className="header-item brand">JSREACT2 :   </div>
-                        <Link className="header-item" to="/">Home</Link>{" "}
-                        <Link className="header-item" to="/page1">Счетчик</Link>{" "}
-                        <Link className="header-item" to="/page2">Пользователи</Link>{" "}
-                        <Link className="header-item" to="/page3">Карта</Link>{" "}
+                        <NavLink className="header-item" to="/">Home</NavLink>{" "}
+                        <NavLink className="header-item" to="/page1">Счетчик</NavLink>{" "}
+                        <NavLink className="header-item" to="/page2">Пользователи</NavLink>{" "}
+                        <NavLink className="header-item" to="/page3">Карта</NavLink>{" "}
                     </div>
                 </div>
                 <div className="content">

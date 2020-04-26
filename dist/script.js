@@ -5923,12 +5923,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
 
 
 
+
+
+var NavLink = function NavLink(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], _extends({}, props, {
+    getProps: function getProps(_ref) {
+      var isCurrent = _ref.isCurrent;
+      // the object returned here is passed to the
+      // anchor element's props
+      return {
+        style: {
+          color: isCurrent ? "red" : "blue"
+        }
+      };
+    }
+  }));
+};
 
 var App = /*#__PURE__*/function (_Component) {
   _inherits(App, _Component);
@@ -5948,16 +5965,16 @@ var App = /*#__PURE__*/function (_Component) {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header-item brand"
-      }, "JSREACT2 :   "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "JSREACT2 :   "), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavLink, {
         className: "header-item",
         to: "/"
-      }, "Home"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "Home"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavLink, {
         className: "header-item",
         to: "/page1"
-      }, "\u0421\u0447\u0435\u0442\u0447\u0438\u043A"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "\u0421\u0447\u0435\u0442\u0447\u0438\u043A"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavLink, {
         className: "header-item",
         to: "/page2"
-      }, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      }, "\u041F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u0438"), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavLink, {
         className: "header-item",
         to: "/page3"
       }, "\u041A\u0430\u0440\u0442\u0430"), " ")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
