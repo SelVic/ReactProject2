@@ -4,47 +4,34 @@ import users from "./users.js";
 import {User} from "./User.jsx";
 
 
-// let userId = users.id;
 class Extract extends Component {
-    //model
     state = {
-        text: ""
+        text: "",
+        filtered : users
     };
     componentDidMount() {
     };
 
-    // updateText = (text) => {
-    //     let searchLogin = text.trim().toLowerCase();
-    //     if (searchLogin)
-    //         this.setState({
-    //             text: searchLogin,
-    //             filtered: users.filter(user => user.login.includes(searchLogin))
-    //         })
-    // }
-
-
-    // imagebox = (url)=>{
-    //     return(
-    //         <div>
-    //             <img width={60} height={60} src={url} />
-    //         </div>
-    //     )
-    // };
-//controller
     changeHandler = (event) =>  {
         event.currentTarget.value ;
         this.setState({text: event.currentTarget.value});
+        let searchId = event.currentTarget.value;
+        if (searchId)
+            this.setState({
+                text: searchId,
+                filtered: users.filter(user => user.login.includes(searchId))
+            })
     };
 //view
     render() {
         let text1 = this.state.text;
+        let filtered = this.state.filtered;
         return (
             <div className="container">
                 <input type="text" value = {text1} onChange={this.changeHandler} />
                 <div className='users'>
                     {
-                        // users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
-                        users.map((user, i) => <User key={user.id} user={user}/>)
+                        filtered.map((user, i) => <User key={user.id} user={user}/>)
                     }
                 </div>
             </div>

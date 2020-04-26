@@ -1,12 +1,12 @@
 import React from "react";
-const User = props => (
-  <div className={`user`}>
-    <div className="foto">
-      <img src={props.user.avatar_url} alt=""/>
-    </div>
-    <div className="info">
-      <div className="name">{props.user.login}</div>
-    </div>
-  </div>
-)
-export {User}
+
+function Home(){
+    return (
+        <div className="jumbo flex-row-center">
+            <div className="jumbo-Container">
+                <h1 className="jumbo-title">Home page</h1>
+                <p className="jumbo-text">Баловство с CSS</p>
+            </div>
+        </div>
+    )
+}

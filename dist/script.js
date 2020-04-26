@@ -5814,7 +5814,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- // let userId = users.id;
+
 
 var Extract = /*#__PURE__*/function (_Component) {
   _inherits(Extract, _Component);
@@ -5832,7 +5832,8 @@ var Extract = /*#__PURE__*/function (_Component) {
 
     _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Extract)).call.apply(_getPrototypeOf2, [this].concat(args)));
     _this.state = {
-      text: ""
+      text: "",
+      filtered: _users_js__WEBPACK_IMPORTED_MODULE_2__["default"]
     };
 
     _this.changeHandler = function (event) {
@@ -5840,6 +5841,14 @@ var Extract = /*#__PURE__*/function (_Component) {
 
       _this.setState({
         text: event.currentTarget.value
+      });
+
+      var searchId = event.currentTarget.value;
+      if (searchId) _this.setState({
+        text: searchId,
+        filtered: _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
+          return user.login.includes(searchId);
+        })
       });
     };
 
@@ -5854,6 +5863,7 @@ var Extract = /*#__PURE__*/function (_Component) {
     //view
     value: function render() {
       var text1 = this.state.text;
+      var filtered = this.state.filtered;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -5862,8 +5872,7 @@ var Extract = /*#__PURE__*/function (_Component) {
         onChange: this.changeHandler
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "users"
-      }, // users.map((user , i) => <div className='user-item' key={i}>{user.login} {user.id} {this.imagebox(user.avatar_url)}</div>)
-      _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].map(function (user, i) {
+      }, filtered.map(function (user, i) {
         return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_User_jsx__WEBPACK_IMPORTED_MODULE_3__["User"], {
           key: user.id,
           user: user
