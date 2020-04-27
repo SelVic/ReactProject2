@@ -1,9 +1,9 @@
 import React, {Fragment, Component} from "react";
 import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
-import {Cycle1} from "./timer.js";
-import {Extract} from "./extract.js";
-import {Maps} from "./map";
+import {Cycle1} from "./scripts/timer.js";
+import {Extract} from "./scripts/extract.js";
+import {Maps} from "./scripts/map";
 
 const NavLink = props => (
     <Link
@@ -36,7 +36,7 @@ class App extends Component {
                 </div>
                 <div className="content">
                     <div className="container">
-                        <h1>Контент</h1>
+                        <div className="myFont2">Контент</div>
                         <Router>
                             <Home path="/" />
                             <Page11 path="/page1" />
@@ -47,7 +47,6 @@ class App extends Component {
                 </div>
                 <div className="footer">
                     <div className="container">
-                        <div>ФУТЕР</div>
                     </div>
                 </div>
             </Fragment>
@@ -66,13 +65,7 @@ function Home(){
     )
 }
 
-//
-// const Page11 = () => (
-//     <div className='time-backgr'>
-//         Счетчик
-//         <Cycle1/>
-//     </div>
-// );
+
 function Page11(){
     return (
         <div className="time-backgr flex-row-center">
@@ -85,16 +78,14 @@ function Page11(){
 }
 const Page2 = () => (
     <div>
-        <h2>Пользователи</h2>
+        <div className="myFont2">Пользователи</div>
         <Extract/>
-        {/*<UsersPageAlt/>*/}
     </div>
 );
 
 
 const Page3 = () => (
     <div>
-        <div>Карта</div>
         <Maps/>
     </div>
 )

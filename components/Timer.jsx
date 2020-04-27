@@ -1,4 +1,4 @@
-import {Cycle1} from "./timer";
+import {Cycle1} from "./Timer";
 import React, {Component, Fragment} from "react";
 
 function Page11(){

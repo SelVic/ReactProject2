@@ -1,7 +1,7 @@
 import React, {Component, Fragment} from "react";
 import {render} from 'react-dom';
 import users from "./users.js";
-import {User} from "./User.jsx";
+import {User} from "../components/User.jsx";
 
 
 class Extract extends Component {
@@ -16,11 +16,16 @@ class Extract extends Component {
         event.currentTarget.value ;
         this.setState({text: event.currentTarget.value});
         let searchId = event.currentTarget.value;
-        if (searchId)
+        if (searchId === "")
             this.setState({
                 text: searchId,
-                filtered: users.filter(user => user.login.includes(searchId))
+                filtered: users
             })
+        else
+        this.setState({
+            text: searchId,
+            filtered: users.filter(user => user.login.includes(searchId))
+        })
     };
 //view
     render() {
