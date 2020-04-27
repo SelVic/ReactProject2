@@ -20,8 +20,8 @@
 
 html {
     overflow-y: scroll;
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(168,168,168,1) 100%);
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
 body {
@@ -34,8 +34,9 @@ html, body, #root {
 }
 
 .header {
-    background-color: #dadada;
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 1);
+    background: rgb(251,236,192);
+    background: radial-gradient(circle, rgba(251,236,192,1) 67%, rgba(255,254,240,1) 85%);
+    box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 1);
 }
 .container {
     max-width: 1280px;
@@ -77,11 +78,12 @@ html, body, #root {
 }
 
 .footer {
-    background-color: #dadada;
+    background: rgb(251,236,192);
+    background: radial-gradient(circle, rgba(251,236,192,1) 67%, rgba(255,254,240,1) 85%);
     line-height: 60px;
     color: black;
     font-weight: bolder;
-    box-shadow: 5px 10px 30px 10px rgba(0, 0, 0, 1);
+    box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 1);
 }
 
 .content {

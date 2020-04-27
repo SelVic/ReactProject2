@@ -239,9 +239,7 @@ function Home() {
     className: "jumbo-Container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "jumbo-title"
-  }, "Home page"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    className: "jumbo-text"
-  }, "\u0411\u0430\u043B\u043E\u0432\u0441\u0442\u0432\u043E \u0441 CSS")));
+  }, "Home page")));
 }
 
 function Page11() {
