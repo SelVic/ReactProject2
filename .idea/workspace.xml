@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract.js" beforeDir="false" afterPath="$PROJECT_DIR$/extract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -126,7 +128,7 @@
       <workItem from="1587598414809" duration="98000" />
       <workItem from="1587774135295" duration="114000" />
       <workItem from="1587820385084" duration="600000" />
-      <workItem from="1587915313693" duration="8536000" />
+      <workItem from="1587915313693" duration="11305000" />
     </task>
     <servers />
   </component>
@@ -230,6 +232,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1260" y="211" width="585" height="732" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1584450844672" />
+    <state x="616" y="235" key="run.anything.popup" timestamp="1587941121944">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="235" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587941121944" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1586787111371">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

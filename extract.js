@@ -28,7 +28,7 @@ class Extract extends Component {
         let filtered = this.state.filtered;
         return (
             <div className="container">
-                <input type="text" value = {text1} onChange={this.changeHandler} />
+                <input className="input-style" type="text" value = {text1} onChange={this.changeHandler} />
                 <div className='users'>
                     {
                         filtered.map((user, i) => <User key={user.id} user={user}/>)

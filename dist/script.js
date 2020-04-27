@@ -5867,6 +5867,7 @@ var Extract = /*#__PURE__*/function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "input-style",
         type: "text",
         value: text1,
         onChange: this.changeHandler
@@ -5936,11 +5937,10 @@ var NavLink = function NavLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], _extends({}, props, {
     getProps: function getProps(_ref) {
       var isCurrent = _ref.isCurrent;
-      // the object returned here is passed to the
-      // anchor element's props
       return {
         style: {
-          color: isCurrent ? "red" : "blue"
+          color: isCurrent ? "white" : "black",
+          background: isCurrent ? "#C2554F" : ""
         }
       };
     }
