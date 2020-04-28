@@ -16,17 +16,12 @@ class Extract extends Component {
         event.currentTarget.value ;
         this.setState({text: event.currentTarget.value});
         let searchId = event.currentTarget.value;
-        if (searchId === "")
-            this.setState({
-                text: searchId,
-                filtered: users
-            })
-        else
         this.setState({
             text: searchId,
-            filtered: users.filter(user => user.login.includes(searchId))
+            filtered: searchId==""?users:users.filter(user => user.login.includes(searchId))
         })
     };
+    //cond?case1:case2
 //view
     render() {
         let text1 = this.state.text;

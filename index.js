@@ -4,7 +4,7 @@ import { Router, Link } from "@reach/router";
 import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
 import {Maps} from "./scripts/map";
-
+//reachrouter focus страницы
 const NavLink = props => (
     <Link
         {...props}
@@ -25,6 +25,7 @@ class App extends Component {
     render() {
         return (
             <Fragment>
+                <div className="gradient-element"></div>
                 <div className="header">
                     <div className="container">
                         <div className="header-item brand">JSREACT2 :   </div>
@@ -37,7 +38,7 @@ class App extends Component {
                 <div className="content">
                     <div className="container">
                         <div className="myFont2">Контент</div>
-                        <Router>
+                        <Router primary={false}>
                             <Home path="/" />
                             <Page11 path="/page1" />
                             <Page2 path="/page2" />

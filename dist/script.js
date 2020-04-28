@@ -161,7 +161,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 
 
-
+ //reachrouter focus страницы
 
 var NavLink = function NavLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Link"], _extends({}, props, {
@@ -190,6 +190,8 @@ var App = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "gradient-element"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "container"
@@ -213,7 +215,9 @@ var App = /*#__PURE__*/function (_Component) {
         className: "container"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "myFont2"
-      }, "\u041A\u043E\u043D\u0442\u0435\u043D\u0442"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Router"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Home, {
+      }, "\u041A\u043E\u043D\u0442\u0435\u043D\u0442"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_reach_router__WEBPACK_IMPORTED_MODULE_2__["Router"], {
+        primary: false
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Home, {
         path: "/"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Page11, {
         path: "/page1"
@@ -37183,12 +37187,10 @@ var Extract = /*#__PURE__*/function (_Component) {
       });
 
       var searchId = event.currentTarget.value;
-      if (searchId === "") _this.setState({
+
+      _this.setState({
         text: searchId,
-        filtered: _users_js__WEBPACK_IMPORTED_MODULE_2__["default"]
-      });else _this.setState({
-        text: searchId,
-        filtered: _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
+        filtered: searchId == "" ? _users_js__WEBPACK_IMPORTED_MODULE_2__["default"] : _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
           return user.login.includes(searchId);
         })
       });
@@ -37202,6 +37204,7 @@ var Extract = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {}
   }, {
     key: "render",
+    //cond?case1:case2
     //view
     value: function render() {
       var text1 = this.state.text;
