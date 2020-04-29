@@ -2,6 +2,8 @@ import React, {Component, Fragment} from "react";
 import {render} from 'react-dom';
 import users from "./users.js";
 import {User} from "../components/User.jsx";
+import qs from "qs"
+
 
 
 class Extract extends Component {
@@ -10,6 +12,13 @@ class Extract extends Component {
         filtered : users
     };
     componentDidMount() {
+        // let path = location.search;
+        //         // path=path.replace('?id=','')
+        //         // if (path)
+        //         //     this.setState({filtered: users.filter(user => user.id === +path)})
+        let query = qs.parse(location.search, {ignoreQueryPrefix: true});
+        if (query.id)
+            this.setState({filtered: users.filter(user => user.id === +query.id)});
     };
 
     changeHandler = (event) =>  {

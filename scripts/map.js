@@ -1,15 +1,6 @@
 import React, {Component} from "react";
-import {countries} from "./countries";
-import render from "react-dom";
 
-// ymaps.ready(maps);
-// function maps() {
-//     return (
-//         <div>Test</div>
-//         // let myMap = new ymaps.Map("map", {center: [55.76, 37.64], zoom: 7})
-//     )
-// }
-// ymaps.ready(Maps);
+
 class Maps extends Component {
     componentDidMount() {
         let foo = () => {
@@ -30,9 +21,3 @@ class Maps extends Component {
     }
 }
 export {Maps}
-// let myMap;
-//
-// function renderMap() {
-//     myMap = new ymaps.Map('map', {center: [55.76], zoom: 10})
-// }
-// export {renderMap}

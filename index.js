@@ -5,6 +5,11 @@ import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
 import {Maps} from "./scripts/map";
 //reachrouter focus страницы
+// intl почитать
+//favicon
+//divspantask
+//function
+//вместо стайла вернуть className с классом active, при этом не потеряв класс header-item
 const NavLink = props => (
     <Link
         {...props}
@@ -18,8 +23,6 @@ const NavLink = props => (
         }}
     />
 );
-
-
 
 class App extends Component {
     render() {
