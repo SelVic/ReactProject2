@@ -1,0 +1,33 @@
+.countries {
+    overflow-y: auto;
+    height: 623px;
+    user-select: none;
+}
+
+.countries-item {
+    padding: 4px 8px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 1px;
+}
+
+.countries-item:hover,
+.countries-item.active {
+    border-radius: 4px;
+    background-color: #127bca;
+    color: white;
+}
+
+.countries-item .country {
+    font-weight: bold;
+}
+
+.countries-item .capital {
+    color: #777;
+    margin-left: auto;
+}
+
+.countries-item:hover .capital,
+.countries-item.active .capital {
+    color: white;
+}
