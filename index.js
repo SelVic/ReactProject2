@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
-import {Maps} from "./scripts/map";
+import {MapsPage} from "./components/MapPage";
 //reachrouter focus страницы
 // intl почитать
 //favicon
@@ -89,7 +89,7 @@ const Page2 = () => (
 
 const Page3 = () => (
     <div>
-        <Maps/>
+        <MapsPage/>
     </div>
 )
 
