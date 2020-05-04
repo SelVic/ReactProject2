@@ -111,11 +111,6 @@ html, body, #root {
     width: 30%;
 }
 
-.mapSize{
-    height: 600px;
-    weight: 600px;
-}
-
 .form-size{
     weight: 350px;
 }

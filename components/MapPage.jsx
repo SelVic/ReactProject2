@@ -1,67 +1,10 @@
 import React, {Component} from "react";
+import {countries} from "./countries";
+// import first from 'lodash/first';
 
-class Page extends Component {
-    constructor(props) {
-        super(props);
-        let c = first(countries) || {};
-        this.state = this.getStateObj(c)
-    }
 
-    getMapData = (country) => {
-        let center, zoom;
-        if (country.capital.latlng && country.capital.latlng.length)
-            [center, zoom] = [country.capital.latlng, 11];
-        else
-            [center, zoom] = [country.latlng, 6];
-        return [center, zoom]
-    };
 
-    onSelect = (country) => {
-        let newState = this.getStateObj(country);
-        this.setState(newState)
-    };
-
-    getStateObj = (country) => {
-        let [center, zoom] = this.getMapData(country);
-        return {
-            selected: country.code,
-            viewData: {
-                code: country.code,
-                domains: country.topLevelDomain,
-                population: country.population,
-                area: country.area,
-                languages: country.languages,
-                currencies: country.currencies,
-                phones: country.callingCodes,
-                subregion: country.subregion,
-                flag: country.flag,
-            },
-            mapData: {
-                center,
-                zoom
-            }
-        }
-    };
-
-    render() {
-        const {viewData, mapData, selected} = this.state;
-        return (
-            <div className="container ">
-                <div className="jumbo">
-                    <h1>Справочник по географии</h1>
-                    <p>Полезная информация о странах</p>
-                </div>
-                <div className="view">
-                    <ViewData {...viewData}/>
-                    <ViewList countries={countries} selected={selected} onSelect={this.onSelect}/>
-                    <ViewMap {...mapData} />
-                </div>
-            </div>
-        )
-    }
-}
-
-class MapsPage extends Component {
+class MapPage extends Component {
     componentDidMount() {
         let foo = () => {
             this.myMap = new ymaps.Map("map", {center: [55.76, 37.64], zoom: 7})
@@ -71,13 +14,75 @@ class MapsPage extends Component {
     componentWillUnmount() {
         this.myMap.destroy();
     }
-
     myMap = null;
-
     render() {
         return (
-            <div className="mapSize" id="map"></div>
+            <div className="view">
+                <div className="view-data">
+                    <div className="view-data-grid">
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Код страны</div>
+                                <div className="view-data-value">1</div>
+                            </div>
+                            <i className="view-data-icon fa fa-book"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Основной домен</div>
+                                <div className="view-data-value">2</div>
+                            </div>
+                            <i className="view-data-icon fa fa-at"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Население</div>
+                                <div className="view-data-value">3</div>
+                            </div>
+                            <i className="view-data-icon fa fa-address-card"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Территория</div>
+                                <div className="view-data-value">4</div>
+                            </div>
+                            <i className="view-data-icon fa fa-globe"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Язык</div>
+                                <div className="view-data-value">5</div>
+                            </div>
+                            <i className="view-data-icon fa fa-comments"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Валюта</div>
+                                <div className="view-data-value">6</div>
+                            </div>
+                            <i className="view-data-icon fa fa-balance-scale"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Телефонный код</div>
+                                <div className="view-data-value">7</div>
+                            </div>
+                            <i className="view-data-icon fa fa-fax"/>
+                        </div>
+                        <div>
+                            <div className="view-data-block">
+                                <div className="view-data-title">Регион</div>
+                                <div className="view-data-value">8</div>
+                            </div>
+                            <i className="view-data-icon fa fa-university"/></div>
+                    </div>
+                    <div className="view-data-flag">
+                        <img src = "https://restcountries.eu/data/yem.svg"/>
+                    </div>
+                </div>
+                <div className="mapSize" id="map"></div>
+            </div>
         )
     }
 }
-export {MapsPage}
+export {MapPage}

@@ -3,26 +3,9 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
-import {MapsPage} from "./components/MapPage";
-//reachrouter focus страницы
-// intl почитать
-//favicon
-//divspantask
-//function
-//вместо стайла вернуть className с классом active, при этом не потеряв класс header-item
-const NavLink = props => (
-    <Link
-        {...props}
-        getProps={({ isCurrent }) => {
-            return {
-                style: {
-                    color: isCurrent ? "white" : "black",
-                    background: isCurrent ? "#C2554F" : ""
-                }
-            };
-        }}
-    />
-);
+import {MapPage} from "./components/MapPage.jsx";
+
+
 
 class App extends Component {
     render() {
@@ -58,9 +41,24 @@ class App extends Component {
     }
 }
 
+const NavLink = props => (
+    <Link
+        {...props}
+        getProps={({ isCurrent }) => {
+            return {
+                style: {
+                    color: isCurrent ? "white" : "black",
+                    background: isCurrent ? "#C2554F" : ""
+                }
+            };
+        }}
+    />
+);
+
+
 function Home(){
     return (
-        <div className="jumbo flex-row-center">
+        <div className="jumboHome flex-row-center">
             <div className="jumbo-Container">
                 <h1 className="jumbo-title">Home page</h1>
             </div>
@@ -89,7 +87,7 @@ const Page2 = () => (
 
 const Page3 = () => (
     <div>
-        <MapsPage/>
+        <MapPage/>
     </div>
 )
 

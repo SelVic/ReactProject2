@@ -31,3 +31,10 @@ module.exports = {
         ]
     },
 };
+
+//reachrouter focus страницы
+// intl почитать
+//favicon
+//divspantask
+//function
+//вместо стайла вернуть className с классом active, при этом не потеряв класс header-item
