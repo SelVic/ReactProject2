@@ -86,6 +86,98 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/CountryView.jsx":
+/*!************************************!*\
+  !*** ./components/CountryView.jsx ***!
+  \************************************/
+/*! exports provided: CountryView */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryView", function() { return CountryView; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var CountryView = function CountryView() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-grid"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u041A\u043E\u0434 \u0441\u0442\u0440\u0430\u043D\u044B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-book"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0434\u043E\u043C\u0435\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-laptop"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u041D\u0430\u0441\u0435\u043B\u0435\u043D\u0438\u0435"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-users"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u0422\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-globe"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u042F\u0437\u044B\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-language"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u0412\u0430\u043B\u044E\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-money"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u044B\u0439 \u043A\u043E\u0434"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-phone-square"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-block"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-title"
+  }, "\u0420\u0435\u0433\u0438\u043E\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-value"
+  }, "8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "view-data-icon fa fa-university"
+  }), "9")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view-data-flag"
+  }));
+};
+
+
+
+/***/ }),
+
 /***/ "./components/MapPage.jsx":
 /*!********************************!*\
   !*** ./components/MapPage.jsx ***!
@@ -98,7 +190,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapPage", function() { return MapPage; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _countries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./countries */ "./components/countries.js");
+/* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -119,6 +211,11 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
  // import first from 'lodash/first';
+//вторая через хуки
+//не мешать пропсы со стейтами
+//componentdidupdate
+//Math
+//в момент старта карты стартануть с правильным значением
 
 var MapPage = /*#__PURE__*/function (_Component) {
   _inherits(MapPage, _Component);
@@ -235,10 +332,10 @@ var MapPage = /*#__PURE__*/function (_Component) {
         className: "view-data-flag"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://restcountries.eu/data/yem.svg"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "mapSize",
         id: "map"
-      }));
+      })));
     }
   }]);
 
@@ -282,10 +379,10 @@ var User = function User(props) {
 
 /***/ }),
 
-/***/ "./components/countries.js":
-/*!*********************************!*\
-  !*** ./components/countries.js ***!
-  \*********************************/
+/***/ "./data/countries.js":
+/*!***************************!*\
+  !*** ./data/countries.js ***!
+  \***************************/
 /*! exports provided: countries */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5957,6 +6054,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _scripts_timer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/timer.js */ "./scripts/timer.js");
 /* harmony import */ var _scripts_extract_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/extract.js */ "./scripts/extract.js");
 /* harmony import */ var _components_MapPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/MapPage.jsx */ "./components/MapPage.jsx");
+/* harmony import */ var _components_CountryView__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/CountryView */ "./components/CountryView.jsx");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -5976,6 +6074,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 

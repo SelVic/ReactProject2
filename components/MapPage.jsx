@@ -1,9 +1,12 @@
 import React, {Component} from "react";
-import {countries} from "./countries";
+import {countries} from "../data/countries";
 // import first from 'lodash/first';
 
-
-
+//вторая через хуки
+//не мешать пропсы со стейтами
+//componentdidupdate
+//Math
+//в момент старта карты стартануть с правильным значением
 class MapPage extends Component {
     componentDidMount() {
         let foo = () => {
@@ -80,7 +83,9 @@ class MapPage extends Component {
                         <img src = "https://restcountries.eu/data/yem.svg"/>
                     </div>
                 </div>
-                <div className="mapSize" id="map"></div>
+                <div>
+                    <div className="mapSize" id="map"></div>
+                </div>
             </div>
         )
     }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const countryView = () => (
+const CountryView = () => (
     <div className="view-data">
         <div className="view-data-grid">
             <div>
@@ -65,4 +65,4 @@ const countryView = () => (
 );
 
 
-export {countryView}
+export {CountryView}

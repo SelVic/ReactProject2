@@ -2,6 +2,9 @@ let path = require('path');
 
 
 module.exports = {
+    resolve: {
+        extensions: ['.js', '.jsx']
+    },
     entry: './index.js',
     mode: 'development',
     devtool: "source-map",

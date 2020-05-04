@@ -4,7 +4,7 @@ import { Router, Link } from "@reach/router";
 import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
 import {MapPage} from "./components/MapPage.jsx";
-
+import {CountryView} from "./components/CountryView";
 
 
 class App extends Component {

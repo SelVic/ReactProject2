@@ -7,14 +7,13 @@
 
 .mapSize{
     height: 100%;
-    border-radius: 20px;
-}
-
-#map > ymaps {
+    overflow: hidden;
     border-radius: 10px;
     border: 4px solid rgba(146,125,255,1);
-    overflow: hidden;
 }
+
+/*#map > ymaps {*/
+/*}*/
 
 .view {
     display: grid;
