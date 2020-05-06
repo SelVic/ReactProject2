@@ -62,6 +62,7 @@ const CountryView = () => (
         <div className="view-data-flag">
         </div>
     </div>
+    // <div></div>
 );
 
 
