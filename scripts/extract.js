@@ -4,7 +4,27 @@ import users from "./users.js";
 import {User} from "../components/User.jsx";
 import qs from "qs"
 
-
+// const UsersPageAlt = props => {
+//     const location = useLocation();
+//     let {id} = qs.parse(location.search, {ignoreQueryPrefix: true});
+//
+//     let [filtered, updateFiltered] = useState(users)
+//     let [text, updateText] = useState("");
+//     let searchLogin = text.trim().toLowerCase();
+//
+//     useEffect(() => {
+//         if (id) {
+//             let result = users.filter(user => user.id === +id)
+//             updateFiltered(result);
+//         }
+//     },[id])
+//
+//     useEffect(() => {
+//         if (searchLogin) {
+//             let result = users.filter(user => user.login.includes(searchLogin))
+//             updateFiltered(result);
+//         }
+//     },[searchLogin])
 
 class Extract extends Component {
     state = {
