@@ -39,6 +39,7 @@ class Extract extends Component {
         let query = qs.parse(location.search, {ignoreQueryPrefix: true});
         if (query.id)
             this.setState({filtered: users.filter(user => user.id === +query.id)});
+        // <div className="mb-20"><input className="form-control" type="text" value={text} onChange={e => updateText(e.currentTarget.value)}/></div>
     };
 
     changeHandler = (event) =>  {
