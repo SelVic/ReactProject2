@@ -87,7 +87,7 @@ const Page2 = () => (
 
 const Page3 = () => (
     <div>
-        <MapPage/>
+        <CountryView/>
     </div>
 )
 

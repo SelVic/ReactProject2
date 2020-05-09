@@ -98,10 +98,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryView", function() { return CountryView; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _MapPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapPage */ "./components/MapPage.jsx");
+
 
 
 var CountryView = function CountryView() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "view"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-grid"
@@ -120,7 +124,7 @@ var CountryView = function CountryView() {
   }, "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0434\u043E\u043C\u0435\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
   }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "view-data-icon fa fa-laptop"
+    className: "view-data-icon fa fa-at"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -128,7 +132,7 @@ var CountryView = function CountryView() {
   }, "\u041D\u0430\u0441\u0435\u043B\u0435\u043D\u0438\u0435"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
   }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "view-data-icon fa fa-users"
+    className: "view-data-icon fa fa-address-card"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -144,7 +148,7 @@ var CountryView = function CountryView() {
   }, "\u042F\u0437\u044B\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
   }, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "view-data-icon fa fa-language"
+    className: "view-data-icon fa fa-comments"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -152,7 +156,7 @@ var CountryView = function CountryView() {
   }, "\u0412\u0430\u043B\u044E\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
   }, "6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "view-data-icon fa fa-money"
+    className: "view-data-icon fa fa-balance-scale"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -160,7 +164,7 @@ var CountryView = function CountryView() {
   }, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u044B\u0439 \u043A\u043E\u0434"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
   }, "7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "view-data-icon fa fa-phone-square"
+    className: "view-data-icon fa fa-fax"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -169,10 +173,11 @@ var CountryView = function CountryView() {
     className: "view-data-value"
   }, "8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-university"
-  }), "9")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-flag"
-  })) // <div></div>
-  ;
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://restcountries.eu/data/yem.svg"
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null)));
 };
 
 
@@ -192,6 +197,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
+/* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/first */ "./node_modules/lodash/first.js");
+/* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_first__WEBPACK_IMPORTED_MODULE_2__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -211,10 +218,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 
- // import first from 'lodash/first';
-//вторая через хуки
-//не мешать пропсы со стейтами
-//componentdidupdate
+
+ //componentdidupdate
 //Math
 //в момент старта карты стартануть с правильным значением
 
@@ -259,84 +264,77 @@ var MapPage = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-grid"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u041A\u043E\u0434 \u0441\u0442\u0440\u0430\u043D\u044B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-book"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0434\u043E\u043C\u0435\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-at"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u041D\u0430\u0441\u0435\u043B\u0435\u043D\u0438\u0435"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-address-card"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u0422\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-globe"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u042F\u0437\u044B\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-comments"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u0412\u0430\u043B\u044E\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-balance-scale"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u044B\u0439 \u043A\u043E\u0434"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-fax"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-block"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-title"
-      }, "\u0420\u0435\u0433\u0438\u043E\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-value"
-      }, "8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "view-data-icon fa fa-university"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "view-data-flag"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "https://restcountries.eu/data/yem.svg"
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "mapSize",
-        id: "map"
-      })));
+      return (// <div className="view">
+        //     <div className="view-data">
+        //         <div className="view-data-grid">
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Код страны</div>
+        //                     <div className="view-data-value">1</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-book"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Основной домен</div>
+        //                     <div className="view-data-value">2</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-at"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Население</div>
+        //                     <div className="view-data-value">3</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-address-card"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Территория</div>
+        //                     <div className="view-data-value">4</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-globe"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Язык</div>
+        //                     <div className="view-data-value">5</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-comments"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Валюта</div>
+        //                     <div className="view-data-value">6</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-balance-scale"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Телефонный код</div>
+        //                     <div className="view-data-value">7</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-fax"/>
+        //             </div>
+        //             <div>
+        //                 <div className="view-data-block">
+        //                     <div className="view-data-title">Регион</div>
+        //                     <div className="view-data-value">8</div>
+        //                 </div>
+        //                 <i className="view-data-icon fa fa-university"/></div>
+        //         </div>
+        //         <div className="view-data-flag">
+        //             <img src = "https://restcountries.eu/data/yem.svg"/>
+        //         </div>
+        //     </div>
+        //     <div>
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "mapSize",
+          id: "map"
+        }) // </div>
+        // </div>
+
+      );
     }
   }]);
 
@@ -6186,7 +6184,7 @@ var Page2 = function Page2() {
 };
 
 var Page3 = function Page3() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MapPage_jsx__WEBPACK_IMPORTED_MODULE_5__["MapPage"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CountryView__WEBPACK_IMPORTED_MODULE_6__["CountryView"], null));
 };
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.querySelector("#root"));
@@ -7748,6 +7746,52 @@ var invariant = function(condition, format, a, b, c, d, e, f) {
 };
 
 module.exports = invariant;
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/first.js":
+/*!**************************************!*\
+  !*** ./node_modules/lodash/first.js ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./head */ "./node_modules/lodash/head.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/lodash/head.js":
+/*!*************************************!*\
+  !*** ./node_modules/lodash/head.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * Gets the first element of `array`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @alias first
+ * @category Array
+ * @param {Array} array The array to query.
+ * @returns {*} Returns the first element of `array`.
+ * @example
+ *
+ * _.head([1, 2, 3]);
+ * // => 1
+ *
+ * _.head([]);
+ * // => undefined
+ */
+function head(array) {
+  return (array && array.length) ? array[0] : undefined;
+}
+
+module.exports = head;
 
 
 /***/ }),
@@ -38330,6 +38374,9 @@ var Extract = function Extract(props) {
         return user.login.includes(searchLogin);
       });
       updateFiltered(result);
+    } else {
+      var _result = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"];
+      updateFiltered(_result);
     }
   }, [searchLogin]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {

@@ -24,6 +24,10 @@ const Extract = props => {
                 let result = users.filter(user => user.login.includes(searchLogin))
                 updateFiltered(result);
             }
+            else{
+                let result = users;
+                updateFiltered(result)
+            }
         },[searchLogin])
         return (
         <div className="container">
