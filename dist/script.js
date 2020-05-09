@@ -171,7 +171,8 @@ var CountryView = function CountryView() {
     className: "view-data-icon fa fa-university"
   }), "9")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-flag"
-  }));
+  })) // <div></div>
+  ;
 };
 
 
@@ -38280,23 +38281,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_User_jsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/User.jsx */ "./components/User.jsx");
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! qs */ "./node_modules/qs/lib/index.js");
 /* harmony import */ var qs__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(qs__WEBPACK_IMPORTED_MODULE_4__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+/* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @reach/router */ "./node_modules/@reach/router/es/index.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
 
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
@@ -38304,91 +38296,100 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Extract = /*#__PURE__*/function (_Component) {
-  _inherits(Extract, _Component);
 
-  function Extract() {
-    var _getPrototypeOf2;
+var Extract = function Extract(props) {
+  var location = Object(_reach_router__WEBPACK_IMPORTED_MODULE_5__["useLocation"])();
 
-    var _this;
+  var _qs$parse = qs__WEBPACK_IMPORTED_MODULE_4___default.a.parse(location.search, {
+    ignoreQueryPrefix: true
+  }),
+      id = _qs$parse.id;
 
-    _classCallCheck(this, Extract);
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_users_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+      _useState2 = _slicedToArray(_useState, 2),
+      filtered = _useState2[0],
+      updateFiltered = _useState2[1];
 
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      text1 = _useState4[0],
+      updateText = _useState4[1];
+
+  var searchLogin = text1.trim().toLowerCase();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (id) {
+      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
+        return user.id === +id;
+      });
+      updateFiltered(result);
     }
-
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(Extract)).call.apply(_getPrototypeOf2, [this].concat(args)));
-    _this.state = {
-      text: "",
-      filtered: _users_js__WEBPACK_IMPORTED_MODULE_2__["default"]
-    };
-
-    _this.changeHandler = function (event) {
-      event.currentTarget.value;
-
-      _this.setState({
-        text: event.currentTarget.value
+  }, [id]);
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
+    if (searchLogin) {
+      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
+        return user.login.includes(searchLogin);
       });
-
-      var searchId = event.currentTarget.value;
-
-      _this.setState({
-        text: searchId,
-        filtered: searchId == "" ? _users_js__WEBPACK_IMPORTED_MODULE_2__["default"] : _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
-          return user.login.includes(searchId);
-        })
-      });
-    };
-
-    return _this;
-  }
-
-  _createClass(Extract, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      // let path = location.search;
-      //         // path=path.replace('?id=','')
-      //         // if (path)
-      //         //     this.setState({filtered: users.filter(user => user.id === +path)})
-      var query = qs__WEBPACK_IMPORTED_MODULE_4___default.a.parse(location.search, {
-        ignoreQueryPrefix: true
-      });
-      if (query.id) this.setState({
-        filtered: _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
-          return user.id === +query.id;
-        })
-      });
+      updateFiltered(result);
     }
-  }, {
-    key: "render",
-    //cond?case1:case2
-    //view
-    value: function render() {
-      var text1 = this.state.text;
-      var filtered = this.state.filtered;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        className: "input-style",
-        type: "text",
-        value: text1,
-        onChange: this.changeHandler
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "users"
-      }, filtered.map(function (user, i) {
-        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_User_jsx__WEBPACK_IMPORTED_MODULE_3__["User"], {
-          key: user.id,
-          user: user
-        });
-      })));
+  }, [searchLogin]);
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    className: "input-style",
+    type: "text",
+    value: text1,
+    onChange: function onChange(e) {
+      return updateText(e.currentTarget.value);
     }
-  }]);
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "users"
+  }, filtered.map(function (user, i) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_User_jsx__WEBPACK_IMPORTED_MODULE_3__["User"], {
+      key: user.id,
+      user: user
+    });
+  })));
+};
 
-  return Extract;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-
+ // class Extract extends Component {
+//     state = {
+//         text: "",
+//         filtered : users
+//     };
+//     componentDidMount() {
+//         let query = qs.parse(location.search, {ignoreQueryPrefix: true});
+//         if (query.id)
+//             this.setState({filtered: users.filter(user => user.id === +query.id)});
+//     };
+//
+//     changeHandler = (event) =>  {
+//         event.currentTarget.value ;
+//         this.setState({text: event.currentTarget.value});
+//         let searchId = event.currentTarget.value;
+//         this.setState({
+//             text: searchId,
+//             filtered: searchId==""?users:users.filter(user => user.login.includes(searchId))
+//         })
+//     };
+//     //cond?case1:case2
+// //view
+//     render() {
+//         let text1 = this.state.text;
+//         let filtered = this.state.filtered;
+//         return (
+//             <div className="container">
+//                 {/*<input className="input-style" type="text" value = {text1} onChange={this.changeHandler} />*/}
+//                 <div className='users'>
+//                     {
+//                         filtered.map((user, i) => <User key={user.id} user={user}/>)
+//                     }
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
+//
+// export {Extract};
 
 /***/ }),
 
