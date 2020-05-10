@@ -99,10 +99,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _MapPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapPage */ "./components/MapPage.jsx");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
-var CountryView = function CountryView() {
+
+var CountryView = function CountryView(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -115,7 +118,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u041A\u043E\u0434 \u0441\u0442\u0440\u0430\u043D\u044B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.code)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-book"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -123,7 +126,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0434\u043E\u043C\u0435\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "2")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.domains)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-at"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -131,7 +134,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u041D\u0430\u0441\u0435\u043B\u0435\u043D\u0438\u0435"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "3")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.population)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-address-card"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -139,7 +142,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u0422\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "4")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.area)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-globe"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -147,7 +150,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u042F\u0437\u044B\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.languages)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-comments"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -155,7 +158,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u0412\u0430\u043B\u044E\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "6")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.currencies)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-balance-scale"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -163,7 +166,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u044B\u0439 \u043A\u043E\u0434"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "7")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.phones)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-fax"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -171,7 +174,7 @@ var CountryView = function CountryView() {
     className: "view-data-title"
   }, "\u0420\u0435\u0433\u0438\u043E\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, "8")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.subregion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-university"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-flag"
@@ -180,6 +183,28 @@ var CountryView = function CountryView() {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null)));
 };
 
+CountryView.defaultProps = {
+  code: "123",
+  domains: [],
+  population: "",
+  area: "",
+  languages: [],
+  currencies: [],
+  phones: [],
+  subregion: "",
+  flag: ""
+};
+CountryView.propTypes = {
+  code: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string,
+  domains: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].array,
+  population: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].number,
+  area: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].number,
+  languages: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string,
+  currencies: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].array,
+  phones: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].array,
+  subregion: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string,
+  flag: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string
+};
 
 
 /***/ }),
