@@ -2,11 +2,6 @@ import React, {Component} from "react";
 import {countries} from "../data/countries";
 import first from 'lodash/first';
 
-
-
-//componentdidupdate
-//Math
-//в момент старта карты стартануть с правильным значением
 class MapPage extends Component {
     componentDidMount() {
         let foo = () => {
@@ -20,8 +15,14 @@ class MapPage extends Component {
     myMap = null;
     render() {
         return (
-                    <div className="mapSize" id="map"></div>
+            <div className="mapSize" id="map"></div>
         )
     }
 }
+
+// MapPage.defaultProps = {
+//     center: [55.7522, 37.6156],
+//     zoom: 11
+// };
+
 export {MapPage}

@@ -75,6 +75,7 @@ html, body, #root {
 
 .header-item:not(.brand):hover {
     background-color: #C2554F;
+    cursor: pointer;
 }
 
 .footer {

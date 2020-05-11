@@ -1,7 +1,8 @@
 .countries {
     overflow-y: auto;
-    height: 100%;
+    height: 819px;
     user-select: none;
+    background-color: white;
 }
 
 .countries-item {

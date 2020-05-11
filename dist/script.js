@@ -86,28 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/Country.jsx":
-/*!********************************!*\
-  !*** ./components/Country.jsx ***!
-  \********************************/
-/*! exports provided: Country */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Country", function() { return Country; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var Country = function Country(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.country.name);
-};
-
-
-
-/***/ }),
-
 /***/ "./components/CountryListView.jsx":
 /*!****************************************!*\
   !*** ./components/CountryListView.jsx ***!
@@ -123,31 +101,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
-/* harmony import */ var _Country__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Country */ "./components/Country.jsx");
 
 
 
- // const CountryListView = props => {
-//     return (
-//         <div className="countries">{
-//             props.countries.map(c => {
-//                 c=c||{};
-//                 return (
-//                     <div key={c.code} className={`countries-item ${props.selected == c.code ? 'active' : ''}`} onClick={e => props.onSelect(c)}>
-//                         <span className="country">{c.name || "Названия нет"}</span> <span className="capital">{c.capital && c.capital.name}</span>
-//                     </div>
-//                 )})
-//         }</div>
-//     )
-// }
 
 var CountryListView1 = function CountryListView1() {
-  var c = _data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"];
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "kek");
-}; // CountryListView1.propTypes = {
-//     onSelect: PropTypes.func
-// };
-
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "countries"
+  }, _data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"].map(function (c) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: c.code
+    }, c.name);
+  }));
+};
 
 
 
@@ -172,7 +138,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
+ //разбить на папки и структуризировать
+//переделать на флекс
+//подумать над багой в extract
+//reduce доки + пример
 
 var CountryView = function CountryView(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -249,7 +218,7 @@ var CountryView = function CountryView(props) {
     className: "view-data-flag"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://restcountries.eu/data/yem.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CountryListView__WEBPACK_IMPORTED_MODULE_3__["CountryListView1"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null)));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CountryListView__WEBPACK_IMPORTED_MODULE_3__["CountryListView1"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null));
 };
 
 CountryView.defaultProps = {
@@ -313,9 +282,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- //componentdidupdate
-//Math
-//в момент старта карты стартануть с правильным значением
+
 
 var MapPage = /*#__PURE__*/function (_Component) {
   _inherits(MapPage, _Component);
@@ -366,7 +333,11 @@ var MapPage = /*#__PURE__*/function (_Component) {
   }]);
 
   return MapPage;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // MapPage.defaultProps = {
+//     center: [55.7522, 37.6156],
+//     zoom: 11
+// };
+
 
 
 
@@ -38376,7 +38347,7 @@ var Extract = function Extract(props) {
   }),
       id = _qs$parse.id;
 
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_users_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(_users_js__WEBPACK_IMPORTED_MODULE_2__["users"]),
       _useState2 = _slicedToArray(_useState, 2),
       filtered = _useState2[0],
       updateFiltered = _useState2[1];
@@ -38386,26 +38357,23 @@ var Extract = function Extract(props) {
       text1 = _useState4[0],
       updateText = _useState4[1];
 
-  var searchLogin = text1.trim().toLowerCase();
+  var searchUser = text1.trim().toLowerCase();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (id) {
-      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
+      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
         return user.id === +id;
       });
       updateFiltered(result);
     }
-  }, [id]);
+  }, [id, searchUser]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (searchLogin) {
-      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"].filter(function (user) {
-        return user.login.includes(searchLogin);
+    if (searchUser) {
+      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
+        return user.login.includes(searchUser);
       });
       updateFiltered(result);
-    } else {
-      var _result = _users_js__WEBPACK_IMPORTED_MODULE_2__["default"];
-      updateFiltered(_result);
     }
-  }, [searchLogin]);
+  }, [searchUser]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
@@ -38562,11 +38530,12 @@ var Cycle1 = /*#__PURE__*/function (_Component) {
 /*!**************************!*\
   !*** ./scripts/users.js ***!
   \**************************/
-/*! exports provided: default */
+/*! exports provided: users */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "users", function() { return users; });
 var users = [{
   "login": "mojombo",
   "id": 1,
@@ -38687,9 +38656,8 @@ var users = [{
   "login": "bmizerany",
   "id": 46,
   "avatar_url": "https://avatars2.githubusercontent.com/u/46?v=4"
-}]; // export default users;
+}];
 
-/* harmony default export */ __webpack_exports__["default"] = (users);
 
 /***/ })
 

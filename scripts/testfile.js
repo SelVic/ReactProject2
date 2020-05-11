@@ -26,11 +26,19 @@
 //
 // foo(4,"vasya", "bobik");
 
-let a = [9,20,30,40];
-
+// let a = [9,20,30,40];
+//
 let sum = a.reduce((acc, curr) => {
     console.log(1);
     acc += curr;
     return acc
 }, 0)
-console.log(sum)
+// console.log(sum)
+
+function myOnSelect() {
+    console.log(1)
+}
+
+let onSelect = myOnSelect;
+
+onSelect();

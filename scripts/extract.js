@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {render} from 'react-dom';
-import users from "./users.js";
+import {users} from "./users.js";
 import {User} from "../components/User.jsx";
 import qs from "qs"
 import {useLocation} from "@reach/router";
@@ -10,25 +10,21 @@ const Extract = props => {
         let {id} = qs.parse(location.search, {ignoreQueryPrefix: true});
         let [filtered, updateFiltered] = useState(users)
         let [text1, updateText] = useState("");
-        let searchLogin = text1.trim().toLowerCase();
+        let searchUser = text1.trim().toLowerCase();
 
         useEffect(() => {
             if (id) {
                 let result = users.filter(user => user.id === +id)
                 updateFiltered(result);
             }
-        },[id])
+        },[id, searchUser])
 
         useEffect(() => {
-            if (searchLogin) {
-                let result = users.filter(user => user.login.includes(searchLogin))
+            if (searchUser) {
+                let result = users.filter(user => user.login.includes(searchUser))
                 updateFiltered(result);
             }
-            else{
-                let result = users;
-                updateFiltered(result)
-            }
-        },[searchLogin])
+        },[searchUser]) 
         return (
         <div className="container">
             <input className="input-style" type="text" value = {text1} onChange={e => updateText(e.currentTarget.value)} />

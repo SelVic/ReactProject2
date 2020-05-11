@@ -3,6 +3,10 @@ import {MapPage} from "./MapPage";
 import {PropTypes} from "prop-types";
 import {CountryListView1} from "./CountryListView";
 
+//разбить на папки и структуризировать
+//переделать на флекс
+//подумать над багой в extract
+//reduce доки + пример
 const CountryView = (props) => (
     <div className="view">
         <div className="view-data">
@@ -67,12 +71,8 @@ const CountryView = (props) => (
                 <img src = "https://restcountries.eu/data/yem.svg"/>
             </div>
         </div>
-        <div>
             <CountryListView1/>
-        </div>
-        <div>
             <MapPage/>
-        </div>
     </div>
 );
 
