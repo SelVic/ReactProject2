@@ -86,6 +86,73 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/Country.jsx":
+/*!********************************!*\
+  !*** ./components/Country.jsx ***!
+  \********************************/
+/*! exports provided: Country */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Country", function() { return Country; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var Country = function Country(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, props.country.name);
+};
+
+
+
+/***/ }),
+
+/***/ "./components/CountryListView.jsx":
+/*!****************************************!*\
+  !*** ./components/CountryListView.jsx ***!
+  \****************************************/
+/*! exports provided: CountryListView1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryListView1", function() { return CountryListView1; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
+/* harmony import */ var _Country__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Country */ "./components/Country.jsx");
+
+
+
+ // const CountryListView = props => {
+//     return (
+//         <div className="countries">{
+//             props.countries.map(c => {
+//                 c=c||{};
+//                 return (
+//                     <div key={c.code} className={`countries-item ${props.selected == c.code ? 'active' : ''}`} onClick={e => props.onSelect(c)}>
+//                         <span className="country">{c.name || "Названия нет"}</span> <span className="capital">{c.capital && c.capital.name}</span>
+//                     </div>
+//                 )})
+//         }</div>
+//     )
+// }
+
+var CountryListView1 = function CountryListView1() {
+  var c = _data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"];
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "kek");
+}; // CountryListView1.propTypes = {
+//     onSelect: PropTypes.func
+// };
+
+
+
+
+/***/ }),
+
 /***/ "./components/CountryView.jsx":
 /*!************************************!*\
   !*** ./components/CountryView.jsx ***!
@@ -101,6 +168,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _MapPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapPage */ "./components/MapPage.jsx");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _CountryListView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CountryListView */ "./components/CountryListView.jsx");
+
 
 
 
@@ -180,7 +249,7 @@ var CountryView = function CountryView(props) {
     className: "view-data-flag"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://restcountries.eu/data/yem.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null)));
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CountryListView__WEBPACK_IMPORTED_MODULE_3__["CountryListView1"], null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null)));
 };
 
 CountryView.defaultProps = {
@@ -289,77 +358,10 @@ var MapPage = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return (// <div className="view">
-        //     <div className="view-data">
-        //         <div className="view-data-grid">
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Код страны</div>
-        //                     <div className="view-data-value">1</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-book"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Основной домен</div>
-        //                     <div className="view-data-value">2</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-at"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Население</div>
-        //                     <div className="view-data-value">3</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-address-card"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Территория</div>
-        //                     <div className="view-data-value">4</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-globe"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Язык</div>
-        //                     <div className="view-data-value">5</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-comments"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Валюта</div>
-        //                     <div className="view-data-value">6</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-balance-scale"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Телефонный код</div>
-        //                     <div className="view-data-value">7</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-fax"/>
-        //             </div>
-        //             <div>
-        //                 <div className="view-data-block">
-        //                     <div className="view-data-title">Регион</div>
-        //                     <div className="view-data-value">8</div>
-        //                 </div>
-        //                 <i className="view-data-icon fa fa-university"/></div>
-        //         </div>
-        //         <div className="view-data-flag">
-        //             <img src = "https://restcountries.eu/data/yem.svg"/>
-        //         </div>
-        //     </div>
-        //     <div>
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          className: "mapSize",
-          id: "map"
-        }) // </div>
-        // </div>
-
-      );
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "mapSize",
+        id: "map"
+      });
     }
   }]);
 

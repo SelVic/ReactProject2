@@ -1,6 +1,6 @@
 .countries {
     overflow-y: auto;
-    height: 623px;
+    height: 100%;
     user-select: none;
 }
 

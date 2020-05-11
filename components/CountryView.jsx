@@ -1,6 +1,7 @@
 import React from "react";
 import {MapPage} from "./MapPage";
 import {PropTypes} from "prop-types";
+import {CountryListView1} from "./CountryListView";
 
 const CountryView = (props) => (
     <div className="view">
@@ -65,6 +66,9 @@ const CountryView = (props) => (
             <div className="view-data-flag">
                 <img src = "https://restcountries.eu/data/yem.svg"/>
             </div>
+        </div>
+        <div>
+            <CountryListView1/>
         </div>
         <div>
             <MapPage/>
