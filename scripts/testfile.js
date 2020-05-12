@@ -42,16 +42,27 @@ function myOnSelect() {
 let onSelect = myOnSelect;
 onSelect();
 
-
 let arr = [1, 2, 3, 0, 4, 5, 6];
-let answer = 0;
+let num = 1;
 let result = arr.reduce(function(sum, elem) {
-    if (elem == 0) {
-        answer = sum;
+    if (sum > 10) {
+        alert(num);
+        return;
     } else {
+        num++;
         return sum + elem;
     }
 });
-if(answer == undefined){answer = result};
-console.log(answer);
+console.log(result)
+// let arr = [1, 2, 3, 0, 4, 5, 6];
+// let answer = 0;
+// let result = arr.reduce(function(sum, elem) {
+//     if (elem == 0) {
+//         answer = sum;
+//     } else {
+//         return sum + elem;
+//     }
+// });
+// if(answer == undefined){answer = result};
+// console.log(answer);
 
