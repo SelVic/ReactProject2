@@ -18,13 +18,13 @@ const Extract = props => {
                 updateFiltered(result);
             }
         },[id, searchUser])
-
+    
         useEffect(() => {
             if (searchUser) {
                 let result = users.filter(user => user.login.includes(searchUser))
                 updateFiltered(result);
             }
-        },[searchUser]) 
+        },[searchUser])
         return (
         <div className="container">
             <input className="input-style" type="text" value = {text1} onChange={e => updateText(e.currentTarget.value)} />
