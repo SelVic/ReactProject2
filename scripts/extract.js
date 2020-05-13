@@ -23,6 +23,7 @@ const Extract = props => {
     //         let result = users.filter(user => user.id === +id)
     //         updateFiltered(result);
     //     }
+    //      else
     // },[id, searchUser])
     
         useEffect(() => {
