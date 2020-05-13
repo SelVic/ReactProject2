@@ -3,7 +3,7 @@ import {PropTypes} from "prop-types";
 import {countries} from "../data/countries";
 
 
-const CountryListView1 = () => {
+const CountryListView1 = (props) => {
     return (
         <div className="countries">
             {
