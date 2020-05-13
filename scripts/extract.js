@@ -18,6 +18,12 @@ const Extract = props => {
                 updateFiltered(result);
             }
         },[id, searchUser])
+    // useEffect(() => {
+    //     if (id) {
+    //         let result = users.filter(user => user.id === +id)
+    //         updateFiltered(result);
+    //     }
+    // },[id, searchUser])
     
         useEffect(() => {
             if (searchUser) {
