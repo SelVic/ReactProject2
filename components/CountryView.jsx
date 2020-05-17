@@ -1,5 +1,5 @@
 import React from "react";
-import {MapPage} from "./MapPage";
+import {ViewMap} from "./ViewMap";
 import {PropTypes} from "prop-types";
 import {CountryListView1} from "./CountryListView";
 
@@ -72,7 +72,7 @@ const CountryView = (props) => (
             </div>
         </div>
             <CountryListView1/>
-            <MapPage/>
+            <ViewMap/>
     </div>
 );
 
