@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {PropTypes} from "prop-types";
-import {countries} from "../data/countries";
+// import {countries} from "../data/countries";
 
 
 // const CountryListView1 = (props) => {
@@ -14,12 +14,11 @@ import {countries} from "../data/countries";
 // }
 
 const CountryListView1 = props => {
-    let css= `countries-item ${props.selected == c.code ? 'active' : ''}`;
     return (
         <div className="countries">
             {
                 props.countries.map(c => (
-                    <div key={c.code} className={css} onClick={e => props.onSelect(c)}>
+                    <div key={c.code} className={`countries-item ${props.selected == c.code ? 'active' : ''}`} onClick={e => props.onSelect(c)}>
                         <span className="country">{c.name}</span> <span className="capital">{c.capital.name}</span>
                     </div>
                 ))

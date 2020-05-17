@@ -6,7 +6,7 @@ import {CountryListView1} from "./CountryListView";
 //разбить на папки и структуризировать
 //переделать на флекс
 //подумать над багой в extract
-//reduce доки + пример
+
 const CountryView = (props) => (
     <div className="view">
         <div className="view-data">
