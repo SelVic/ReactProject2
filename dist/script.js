@@ -103,47 +103,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
 
 
+ // const CountryListView1 = (props) => {
+//     return (
+//         <div className="countries">
+//             {
+//                 countries.map(c =>  <div key={c.code}>{c.name}</div>)
+//             }
+//         </div>
+//     )
+// }
 
-
-var CountryListView1 = function CountryListView1() {
+var CountryListView1 = function CountryListView1(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "countries"
-  }, _data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"].map(function (c) {
+  }, props.countries.map(function (c) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: c.code
-    }, c.name);
+      key: c.code,
+      onClick: function onClick(e) {
+        return props.onSelect(c);
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "country"
+    }, c.name));
   }));
+};
+
+CountryListView1.defaultProps = {
+  onSelect: function onSelect(country) {
+    console.log('ViewList onSelect not implemented, country:', country);
+  },
+  selected: "AFG"
+};
+CountryListView1.propTypes = {
+  onSelect: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].func,
+  countries: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
+  selected: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string
+};
+
+
+/***/ }),
+
+/***/ "./components/User.jsx":
+/*!*****************************!*\
+  !*** ./components/User.jsx ***!
+  \*****************************/
+/*! exports provided: User */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var User = function User(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "user"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "foto"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: props.user.avatar_url,
+    alt: ""
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "info"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "name"
+  }, props.user.login)));
 };
 
 
 
 /***/ }),
 
-/***/ "./components/CountryView.jsx":
-/*!************************************!*\
-  !*** ./components/CountryView.jsx ***!
-  \************************************/
-/*! exports provided: CountryView */
+/***/ "./components/ViewCountryData.jsx":
+/*!****************************************!*\
+  !*** ./components/ViewCountryData.jsx ***!
+  \****************************************/
+/*! exports provided: ViewCountryData */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryView", function() { return CountryView; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewCountryData", function() { return ViewCountryData; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _MapPage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MapPage */ "./components/MapPage.jsx");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _CountryListView__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CountryListView */ "./components/CountryListView.jsx");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 
 
 
- //разбить на папки и структуризировать
-//переделать на флекс
-//подумать над багой в extract
-//reduce доки + пример
-
-var CountryView = function CountryView(props) {
+var ViewCountryData = function ViewCountryData(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -217,12 +267,12 @@ var CountryView = function CountryView(props) {
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-flag"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://restcountries.eu/data/yem.svg"
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CountryListView__WEBPACK_IMPORTED_MODULE_3__["CountryListView1"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_MapPage__WEBPACK_IMPORTED_MODULE_1__["MapPage"], null));
+    src: props.flag
+  }))));
 };
 
-CountryView.defaultProps = {
-  code: "123",
+ViewCountryData.defaultProps = {
+  code: "",
   domains: [],
   population: "",
   area: "",
@@ -232,36 +282,35 @@ CountryView.defaultProps = {
   subregion: "",
   flag: ""
 };
-CountryView.propTypes = {
-  code: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string,
-  domains: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].array,
-  population: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].number,
-  area: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].number,
-  languages: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string,
-  currencies: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].array,
-  phones: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].array,
-  subregion: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string,
-  flag: prop_types__WEBPACK_IMPORTED_MODULE_2__["PropTypes"].string
+ViewCountryData.propTypes = {
+  code: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string,
+  domains: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
+  population: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].number,
+  area: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].number,
+  languages: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string,
+  currencies: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
+  phones: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
+  subregion: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string,
+  flag: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string
 };
 
 
 /***/ }),
 
-/***/ "./components/MapPage.jsx":
+/***/ "./components/ViewMap.jsx":
 /*!********************************!*\
-  !*** ./components/MapPage.jsx ***!
+  !*** ./components/ViewMap.jsx ***!
   \********************************/
-/*! exports provided: MapPage */
+/*! exports provided: ViewMap */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapPage", function() { return MapPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewMap", function() { return ViewMap; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
-/* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash/first */ "./node_modules/lodash/first.js");
-/* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash_first__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -283,44 +332,50 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+var ViewMap = /*#__PURE__*/function (_Component) {
+  _inherits(ViewMap, _Component);
 
-var MapPage = /*#__PURE__*/function (_Component) {
-  _inherits(MapPage, _Component);
-
-  function MapPage() {
+  function ViewMap() {
     var _getPrototypeOf2;
 
     var _this;
 
-    _classCallCheck(this, MapPage);
+    _classCallCheck(this, ViewMap);
 
     for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(MapPage)).call.apply(_getPrototypeOf2, [this].concat(args)));
-    _this.myMap = null;
+    _this = _possibleConstructorReturn(this, (_getPrototypeOf2 = _getPrototypeOf(ViewMap)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.yaMap = null;
     return _this;
   }
 
-  _createClass(MapPage, [{
+  _createClass(ViewMap, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       var _this2 = this;
 
-      var foo = function foo() {
-        _this2.myMap = new ymaps.Map("map", {
-          center: [55.76, 37.64],
-          zoom: 7
+      var _this$props = this.props,
+          center = _this$props.center,
+          zoom = _this$props.zoom;
+      window.ymaps.ready(function () {
+        _this2.yaMap = new window.ymaps.Map("map", {
+          center: center,
+          zoom: zoom
         });
-      };
-
-      window.ymaps.ready(foo);
+      });
     }
   }, {
-    key: "componentWillUnmount",
-    value: function componentWillUnmount() {
-      this.myMap.destroy();
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(prevProps, prevState, snapshot) {
+      if (this.props !== prevProps) {
+        var _this$props2 = this.props,
+            center = _this$props2.center,
+            zoom = _this$props2.zoom;
+        this.yaMap.setCenter(center, zoom);
+        console.log('map update');
+      }
     }
   }, {
     key: "render",
@@ -332,46 +387,17 @@ var MapPage = /*#__PURE__*/function (_Component) {
     }
   }]);
 
-  return MapPage;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]); // MapPage.defaultProps = {
-//     center: [55.7522, 37.6156],
-//     zoom: 11
-// };
+  return ViewMap;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-
-
-
-/***/ }),
-
-/***/ "./components/User.jsx":
-/*!*****************************!*\
-  !*** ./components/User.jsx ***!
-  \*****************************/
-/*! exports provided: User */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "User", function() { return User; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-
-var User = function User(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "foto"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: props.user.avatar_url,
-    alt: ""
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "info"
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name"
-  }, props.user.login)));
+ViewMap.defaultProps = {
+  center: [55.7522, 37.6156],
+  zoom: 11
 };
-
+ViewMap.propTypes = {
+  center: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
+  zoom: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].number
+};
 
 
 /***/ }),
@@ -6050,8 +6076,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _reach_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @reach/router */ "./node_modules/@reach/router/es/index.js");
 /* harmony import */ var _scripts_timer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./scripts/timer.js */ "./scripts/timer.js");
 /* harmony import */ var _scripts_extract_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/extract.js */ "./scripts/extract.js");
-/* harmony import */ var _components_MapPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/MapPage.jsx */ "./components/MapPage.jsx");
-/* harmony import */ var _components_CountryView__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/CountryView */ "./components/CountryView.jsx");
+/* harmony import */ var _pages_MapPage_jsx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/MapPage.jsx */ "./pages/MapPage.jsx");
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -6071,7 +6096,6 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -6182,7 +6206,7 @@ var Page2 = function Page2() {
 };
 
 var Page3 = function Page3() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CountryView__WEBPACK_IMPORTED_MODULE_6__["CountryView"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_MapPage_jsx__WEBPACK_IMPORTED_MODULE_5__["MapPage"], null));
 };
 
 Object(react_dom__WEBPACK_IMPORTED_MODULE_1__["render"])(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.querySelector("#root"));
@@ -38305,6 +38329,147 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./pages/MapPage.jsx":
+/*!***************************!*\
+  !*** ./pages/MapPage.jsx ***!
+  \***************************/
+/*! exports provided: MapPage */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapPage", function() { return MapPage; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
+/* harmony import */ var _components_ViewMap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ViewMap */ "./components/ViewMap.jsx");
+/* harmony import */ var _components_ViewCountryData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ViewCountryData */ "./components/ViewCountryData.jsx");
+/* harmony import */ var _components_CountryListView__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/CountryListView */ "./components/CountryListView.jsx");
+/* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/first */ "./node_modules/lodash/first.js");
+/* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_first__WEBPACK_IMPORTED_MODULE_6__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance"); }
+
+function _iterableToArrayLimit(arr, i) { if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) { return; } var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+
+
+
+
+var MapPage = /*#__PURE__*/function (_Component) {
+  _inherits(MapPage, _Component);
+
+  function MapPage(props) {
+    var _this;
+
+    _classCallCheck(this, MapPage);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(MapPage).call(this, props));
+
+    _this.getMapData = function (country) {
+      var center, zoom;
+
+      if (country.capital.latlng && country.capital.latlng.length) {
+        var _ref = [country.capital.latlng, 11];
+        center = _ref[0];
+        zoom = _ref[1];
+      } else {
+        var _ref2 = [country.latlng, 6];
+        center = _ref2[0];
+        zoom = _ref2[1];
+      }
+
+      return [center, zoom];
+    };
+
+    _this.onSelect = function (country) {
+      var newState = _this.getStateObj(country);
+
+      _this.setState(newState);
+    };
+
+    _this.getStateObj = function (country) {
+      var _this$getMapData = _this.getMapData(country),
+          _this$getMapData2 = _slicedToArray(_this$getMapData, 2),
+          center = _this$getMapData2[0],
+          zoom = _this$getMapData2[1];
+
+      return {
+        selected: country.code,
+        viewCountryData: {
+          code: country.code,
+          domains: country.topLevelDomain,
+          population: country.population,
+          area: country.area,
+          languages: country.languages,
+          currencies: country.currencies,
+          phones: country.callingCodes,
+          subregion: country.subregion,
+          flag: country.flag
+        },
+        mapData: {
+          center: center,
+          zoom: zoom
+        }
+      };
+    };
+
+    var c = lodash_first__WEBPACK_IMPORTED_MODULE_6___default()(_data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"]) || {};
+    _this.state = _this.getStateObj(c);
+    return _this;
+  }
+
+  _createClass(MapPage, [{
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          viewCountryData = _this$state.viewCountryData,
+          mapData = _this$state.mapData,
+          selected = _this$state.selected;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "view"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ViewCountryData__WEBPACK_IMPORTED_MODULE_4__["ViewCountryData"], viewCountryData), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CountryListView__WEBPACK_IMPORTED_MODULE_5__["CountryListView1"], {
+        countries: _data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"],
+        selected: selected,
+        onSelect: this.onSelect
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ViewMap__WEBPACK_IMPORTED_MODULE_3__["ViewMap"], mapData));
+    }
+  }]);
+
+  return MapPage;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+
+
+/***/ }),
+
 /***/ "./scripts/extract.js":
 /*!****************************!*\
   !*** ./scripts/extract.js ***!
@@ -38365,7 +38530,14 @@ var Extract = function Extract(props) {
       });
       updateFiltered(result);
     }
-  }, [id, searchUser]);
+  }, [id, searchUser]); // useEffect(() => {
+  //     if (id) {
+  //         let result = users.filter(user => user.id === +id)
+  //         updateFiltered(result);
+  //     }
+  //      else
+  // },[id, searchUser])
+
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     if (searchUser) {
       var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {

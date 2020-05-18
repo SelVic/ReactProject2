@@ -1,104 +1,65 @@
-import React from "react";
+import React, {Component} from "react";
+import {render} from "react-dom";
+import {countries} from "../data/countries";
 import {ViewMap} from "../components/ViewMap";
-import {PropTypes} from "prop-types";
+import {ViewCountryData} from "../components/ViewCountryData";
 import {CountryListView1} from "../components/CountryListView";
+import first from 'lodash/first'
 
-//разбить на папки и структуризировать
-//переделать на флекс
-//подумать над багой в extract
 
-const MapPage = (props) => (
-    <div className="view">
-        <div className="view-data">
-            <div className="view-data-grid">
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Код страны</div>
-                        <div className="view-data-value">{props.code}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-book"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Основной домен</div>
-                        <div className="view-data-value">{props.domains}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-at"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Население</div>
-                        <div className="view-data-value">{props.population}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-address-card"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Территория</div>
-                        <div className="view-data-value">{props.area}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-globe"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Язык</div>
-                        <div className="view-data-value">{props.languages}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-comments"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Валюта</div>
-                        <div className="view-data-value">{props.currencies}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-balance-scale"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Телефонный код</div>
-                        <div className="view-data-value">{props.phones}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-fax"/>
-                </div>
-                <div>
-                    <div className="view-data-block">
-                        <div className="view-data-title">Регион</div>
-                        <div className="view-data-value">{props.subregion}</div>
-                    </div>
-                    <i className="view-data-icon fa fa-university"/></div>
-            </div>
-            <div className="view-data-flag">
-                <img src = "https://restcountries.eu/data/yem.svg"/>
-            </div>
-        </div>
-            <CountryListView1/>
-            <ViewMap/>
-    </div>
-);
+class MapPage extends Component {
+    constructor(props) {
+        super(props);
+        let c = first(countries) || {};
+        this.state = this.getStateObj(c)
+    }
 
-MapPage.defaultProps = {
-    code: "123",
-    domains: [],
-    population: "",
-    area: "",
-    languages: [],
-    currencies: [],
-    phones: [],
-    subregion: "",
-    flag: ""
-};
+    getMapData = (country) => {
+        let center, zoom;
+        if (country.capital.latlng && country.capital.latlng.length)
+            [center, zoom] = [country.capital.latlng, 11];
+        else
+            [center, zoom] = [country.latlng, 6];
+        return [center, zoom]
+    };
 
-MapPage.propTypes = {
-    code: PropTypes.string,
-    domains: PropTypes.array,
-    population: PropTypes.number,
-    area: PropTypes.number,
-    languages: PropTypes.string,
-    currencies: PropTypes.array,
-    phones: PropTypes.array,
-    subregion: PropTypes.string,
-    flag: PropTypes.string
+    onSelect = (country) => {
+        let newState = this.getStateObj(country);
+        this.setState(newState)
+    };
+
+    getStateObj = (country) => {
+        let [center, zoom] = this.getMapData(country);
+        return {
+            selected: country.code,
+            viewCountryData: {
+                code: country.code,
+                domains: country.topLevelDomain,
+                population: country.population,
+                area: country.area,
+                languages: country.languages,
+                currencies: country.currencies,
+                phones: country.callingCodes,
+                subregion: country.subregion,
+                flag: country.flag,
+            },
+            mapData: {
+                center,
+                zoom
+            }
+        }
+    };
+
+    render() {
+        const {viewCountryData, mapData, selected} = this.state;
+        return (
+                <div className="view">
+                    <ViewCountryData {...viewCountryData}/>
+                    <CountryListView1 countries={countries} selected={selected} onSelect={this.onSelect}/>
+                    <ViewMap {...mapData} />
+                </div>
+        )
+    }
 }
-
 
 export {MapPage}

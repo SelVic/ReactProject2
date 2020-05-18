@@ -3,9 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ad3ebd67-5760-4f4e-8733-185d19565f6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CountryView.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Country.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/CountryListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/CountryListView.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/UsersPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ViewMap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ViewMap.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/prop-types/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/prop-types/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/MapPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/MapPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +48,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/components" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -50,13 +56,6 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\WebstormProjects\jstask2\components" />
-      <recent name="C:\Users\User\WebstormProjects\jstask2" />
-      <recent name="C:\Users\User\WebstormProjects\jstask2\images" />
-      <recent name="C:\Users\User\WebstormProjects\jstask2\css" />
-      <recent name="C:\Users\User\WebstormProjects\jstask1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\WebstormProjects\jstask2\components" />
       <recent name="C:\Users\User\WebstormProjects\jstask2" />
@@ -64,8 +63,15 @@
       <recent name="C:\Users\User\WebstormProjects\jstask2\images" />
       <recent name="C:\Users\User\WebstormProjects\jstask2\css" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\WebstormProjects\jstask2\components" />
+      <recent name="C:\Users\User\WebstormProjects\jstask2" />
+      <recent name="C:\Users\User\WebstormProjects\jstask2\images" />
+      <recent name="C:\Users\User\WebstormProjects\jstask2\css" />
+      <recent name="C:\Users\User\WebstormProjects\jstask1" />
+    </key>
   </component>
-  <component name="RunManager" selected="Node.js.testfile.js">
+  <component name="RunManager" selected="npm.build">
     <configuration name="start.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/start.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
@@ -84,8 +90,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Node.js.testfile.js" />
         <item itemvalue="npm.build" />
+        <item itemvalue="Node.js.testfile.js" />
         <item itemvalue="Node.js.start.js" />
       </list>
     </recent_temporary>
@@ -140,6 +146,7 @@
       <workItem from="1589487893964" duration="600000" />
       <workItem from="1589644207457" duration="599000" />
       <workItem from="1589717527657" duration="2434000" />
+      <workItem from="1589813764989" duration="4281000" />
     </task>
     <servers />
   </component>
@@ -163,22 +170,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="829" y="417" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586538929890" />
-    <state width="1898" height="294" key="GridCell.Tab.0.bottom" timestamp="1589242513105">
+    <state width="1898" height="320" key="GridCell.Tab.0.bottom" timestamp="1589824803991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="294" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589242513105" />
-    <state width="1898" height="294" key="GridCell.Tab.0.center" timestamp="1589242513105">
+    <state width="1898" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589824803991" />
+    <state width="1898" height="320" key="GridCell.Tab.0.center" timestamp="1589824803991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="294" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589242513105" />
-    <state width="1898" height="294" key="GridCell.Tab.0.left" timestamp="1589242513105">
+    <state width="1898" height="320" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589824803991" />
+    <state width="1898" height="320" key="GridCell.Tab.0.left" timestamp="1589824803991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="294" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589242513105" />
-    <state width="1898" height="294" key="GridCell.Tab.0.right" timestamp="1589242513105">
+    <state width="1898" height="320" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589824803991" />
+    <state width="1898" height="320" key="GridCell.Tab.0.right" timestamp="1589824803991">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1898" height="294" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589242513105" />
+    <state width="1898" height="320" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589824803991" />
     <state width="1898" height="294" key="GridCell.Tab.1.bottom" timestamp="1589242513105">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

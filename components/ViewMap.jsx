@@ -1,6 +1,5 @@
 import React, {Component} from "react";
-import {countries} from "../data/countries";
-import first from 'lodash/first';
+import {PropTypes} from "prop-types";
 
 class ViewMap extends Component {
     yaMap = null;

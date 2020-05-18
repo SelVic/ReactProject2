@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {PropTypes} from "prop-types";
-// import {countries} from "../data/countries";
+import {countries} from "../data/countries";
 
 
 // const CountryListView1 = (props) => {
@@ -18,8 +18,8 @@ const CountryListView1 = props => {
         <div className="countries">
             {
                 props.countries.map(c => (
-                    <div key={c.code} className={`countries-item ${props.selected == c.code ? 'active' : ''}`} onClick={e => props.onSelect(c)}>
-                        <span className="country">{c.name}</span> <span className="capital">{c.capital.name}</span>
+                    <div key={c.code} onClick={e => props.onSelect(c)}>
+                        <span className="country">{c.name}</span>
                     </div>
                 ))
             }
@@ -30,13 +30,14 @@ const CountryListView1 = props => {
 CountryListView1.defaultProps = {
     onSelect(country) {
         console.log('ViewList onSelect not implemented, country:', country)
-    }
+    },
+    selected: "AFG"
 };
 
 CountryListView1.propTypes = {
     onSelect: PropTypes.func,
     countries: PropTypes.array,
-    selected: PropTypes.number
+    selected: PropTypes.string
 };
 
 export {CountryListView1}
