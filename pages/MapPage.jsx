@@ -10,26 +10,22 @@ import first from 'lodash/first'
 class MapPage extends Component {
     constructor(props) {
         super(props);
-        let c = first(countries) || {};
-        this.state = this.getStateObj(c)
+        let countr = first(countries) || {};
+        this.state = this.getObjectState(countr)
     }
 
-    getMapData = (country) => {
-        let center, zoom;
-        if (country.capital.latlng && country.capital.latlng.length)
-            [center, zoom] = [country.capital.latlng, 11];
-        else
-            [center, zoom] = [country.latlng, 6];
+    getMapState = (country) => {
+        let [center, zoom] = [country.latlng, 6];
         return [center, zoom]
     };
 
     onSelect = (country) => {
-        let newState = this.getStateObj(country);
+        let newState = this.getObjectState(country);
         this.setState(newState)
     };
 
-    getStateObj = (country) => {
-        let [center, zoom] = this.getMapData(country);
+    getObjectState = (country) => {
+        let [center, zoom] = this.getMapState(country);
         return {
             selected: country.code,
             viewCountryData: {
@@ -44,8 +40,7 @@ class MapPage extends Component {
                 flag: country.flag,
             },
             mapData: {
-                center,
-                zoom
+                center, zoom
             }
         }
     };

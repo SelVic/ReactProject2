@@ -28,9 +28,6 @@ const CountryListView1 = props => {
 };
 
 CountryListView1.defaultProps = {
-    onSelect(country) {
-        console.log('ViewList onSelect not implemented, country:', country)
-    },
     selected: "AFG"
 };
 

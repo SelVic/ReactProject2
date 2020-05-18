@@ -129,9 +129,6 @@ var CountryListView1 = function CountryListView1(props) {
 };
 
 CountryListView1.defaultProps = {
-  onSelect: function onSelect(country) {
-    console.log('ViewList onSelect not implemented, country:', country);
-  },
   selected: "AFG"
 };
 CountryListView1.propTypes = {
@@ -38393,33 +38390,24 @@ var MapPage = /*#__PURE__*/function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MapPage).call(this, props));
 
-    _this.getMapData = function (country) {
-      var center, zoom;
-
-      if (country.capital.latlng && country.capital.latlng.length) {
-        var _ref = [country.capital.latlng, 11];
-        center = _ref[0];
-        zoom = _ref[1];
-      } else {
-        var _ref2 = [country.latlng, 6];
-        center = _ref2[0];
-        zoom = _ref2[1];
-      }
-
+    _this.getMapState = function (country) {
+      var _ref = [country.latlng, 6],
+          center = _ref[0],
+          zoom = _ref[1];
       return [center, zoom];
     };
 
     _this.onSelect = function (country) {
-      var newState = _this.getStateObj(country);
+      var newState = _this.getObjectState(country);
 
       _this.setState(newState);
     };
 
-    _this.getStateObj = function (country) {
-      var _this$getMapData = _this.getMapData(country),
-          _this$getMapData2 = _slicedToArray(_this$getMapData, 2),
-          center = _this$getMapData2[0],
-          zoom = _this$getMapData2[1];
+    _this.getObjectState = function (country) {
+      var _this$getMapState = _this.getMapState(country),
+          _this$getMapState2 = _slicedToArray(_this$getMapState, 2),
+          center = _this$getMapState2[0],
+          zoom = _this$getMapState2[1];
 
       return {
         selected: country.code,
@@ -38441,8 +38429,8 @@ var MapPage = /*#__PURE__*/function (_Component) {
       };
     };
 
-    var c = lodash_first__WEBPACK_IMPORTED_MODULE_6___default()(_data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"]) || {};
-    _this.state = _this.getStateObj(c);
+    var countr = lodash_first__WEBPACK_IMPORTED_MODULE_6___default()(_data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"]) || {};
+    _this.state = _this.getObjectState(countr);
     return _this;
   }
 
