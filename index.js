@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import { Router, Link } from "@reach/router";
 import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
-import {MapPage} from "./components/MapPage.jsx";
+import {MapPage} from "./pages/MapPage.jsx";
 import {CountryView} from "./components/CountryView";
 
 
@@ -87,7 +87,7 @@ const Page2 = () => (
 
 const Page3 = () => (
     <div>
-        <CountryView/>
+        <MapPage/>
     </div>
 )
 

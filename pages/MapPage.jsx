@@ -1,13 +1,13 @@
 import React from "react";
-import {ViewMap} from "./ViewMap";
+import {ViewMap} from "../components/ViewMap";
 import {PropTypes} from "prop-types";
-import {CountryListView1} from "./CountryListView";
+import {CountryListView1} from "../components/CountryListView";
 
 //разбить на папки и структуризировать
 //переделать на флекс
 //подумать над багой в extract
 
-const CountryView = (props) => (
+const MapPage = (props) => (
     <div className="view">
         <div className="view-data">
             <div className="view-data-grid">
@@ -76,7 +76,7 @@ const CountryView = (props) => (
     </div>
 );
 
-CountryView.defaultProps = {
+MapPage.defaultProps = {
     code: "123",
     domains: [],
     population: "",
@@ -88,7 +88,7 @@ CountryView.defaultProps = {
     flag: ""
 };
 
-CountryView.propTypes = {
+MapPage.propTypes = {
     code: PropTypes.string,
     domains: PropTypes.array,
     population: PropTypes.number,
@@ -101,4 +101,4 @@ CountryView.propTypes = {
 }
 
 
-export {CountryView}
+export {MapPage}
