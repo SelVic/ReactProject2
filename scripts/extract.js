@@ -13,11 +13,22 @@ const Extract = props => {
         let searchUser = text1.trim().toLowerCase();
 
         useEffect(() => {
-            if (id) {
+            if (id || (id && !searchUser)) {
                 let result = users.filter(user => user.id === +id)
                 updateFiltered(result);
             }
-        },[id, searchUser])
+            else {
+                if (searchUser) {
+                    let result = users.filter(user => user.login.includes(searchUser))
+                    updateFiltered(result);
+                }
+                else
+                {
+                    let result = users;
+                    updateFiltered(result);
+                }
+            }
+        },[id,searchUser])
     // useEffect(() => {
     //     if (id) {
     //         let result = users.filter(user => user.id === +id)
@@ -25,7 +36,7 @@ const Extract = props => {
     //     }
     //      else
     // },[id, searchUser])
-    
+
         useEffect(() => {
             if (searchUser) {
                 let result = users.filter(user => user.login.includes(searchUser))
@@ -65,8 +76,8 @@ export {Extract}
 //             filtered: searchId==""?users:users.filter(user => user.login.includes(searchId))
 //         })
 //     };
-//     //cond?case1:case2
-// //view
+//
+//
 //     render() {
 //         let text1 = this.state.text;
 //         let filtered = this.state.filtered;

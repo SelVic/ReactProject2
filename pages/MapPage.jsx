@@ -3,7 +3,7 @@ import {render} from "react-dom";
 import {countries} from "../data/countries";
 import {ViewMap} from "../components/ViewMap";
 import {ViewCountryData} from "../components/ViewCountryData";
-import {CountryListView1} from "../components/CountryListView";
+import {ViewCountryList} from "../components/ViewCountryList";
 import first from 'lodash/first'
 
 
@@ -14,14 +14,14 @@ class MapPage extends Component {
         this.state = this.getObjectState(countr)
     }
 
-    getMapState = (country) => {
-        let [center, zoom] = [country.latlng, 6];
-        return [center, zoom]
-    };
-
     onSelect = (country) => {
         let newState = this.getObjectState(country);
         this.setState(newState)
+    };
+
+    getMapState = (country) => {
+        let [center, zoom] = [country.latlng, 6];
+        return [center, zoom]
     };
 
     getObjectState = (country) => {
@@ -50,7 +50,7 @@ class MapPage extends Component {
         return (
                 <div className="view">
                     <ViewCountryData {...viewCountryData}/>
-                    <CountryListView1 countries={countries} selected={selected} onSelect={this.onSelect}/>
+                    <ViewCountryList countries= {countries} selected={selected} onSelect={this.onSelect}/>
                     <ViewMap {...mapData} />
                 </div>
         )

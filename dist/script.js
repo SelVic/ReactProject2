@@ -86,60 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./components/CountryListView.jsx":
-/*!****************************************!*\
-  !*** ./components/CountryListView.jsx ***!
-  \****************************************/
-/*! exports provided: CountryListView1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CountryListView1", function() { return CountryListView1; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
-
-
- // const CountryListView1 = (props) => {
-//     return (
-//         <div className="countries">
-//             {
-//                 countries.map(c =>  <div key={c.code}>{c.name}</div>)
-//             }
-//         </div>
-//     )
-// }
-
-var CountryListView1 = function CountryListView1(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "countries"
-  }, props.countries.map(function (c) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      key: c.code,
-      onClick: function onClick(e) {
-        return props.onSelect(c);
-      }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "country"
-    }, c.name));
-  }));
-};
-
-CountryListView1.defaultProps = {
-  selected: "AFG"
-};
-CountryListView1.propTypes = {
-  onSelect: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].func,
-  countries: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
-  selected: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string
-};
-
-
-/***/ }),
-
 /***/ "./components/User.jsx":
 /*!*****************************!*\
   !*** ./components/User.jsx ***!
@@ -294,6 +240,52 @@ ViewCountryData.propTypes = {
 
 /***/ }),
 
+/***/ "./components/ViewCountryList.jsx":
+/*!****************************************!*\
+  !*** ./components/ViewCountryList.jsx ***!
+  \****************************************/
+/*! exports provided: ViewCountryList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ViewCountryList", function() { return ViewCountryList; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
+
+
+
+
+var ViewCountryList = function ViewCountryList(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "countries"
+  }, props.countries.map(function (c) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      key: c.code,
+      onClick: function onClick(e) {
+        return props.onSelect(c);
+      }
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "country"
+    }, c.name));
+  }));
+};
+
+ViewCountryList.defaultProps = {
+  selected: "AFG"
+};
+ViewCountryList.propTypes = {
+  onSelect: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].func,
+  countries: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
+  selected: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string
+};
+
+
+/***/ }),
+
 /***/ "./components/ViewMap.jsx":
 /*!********************************!*\
   !*** ./components/ViewMap.jsx ***!
@@ -371,7 +363,6 @@ var ViewMap = /*#__PURE__*/function (_Component) {
             center = _this$props2.center,
             zoom = _this$props2.zoom;
         this.yaMap.setCenter(center, zoom);
-        console.log('map update');
       }
     }
   }, {
@@ -38343,7 +38334,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_countries__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../data/countries */ "./data/countries.js");
 /* harmony import */ var _components_ViewMap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/ViewMap */ "./components/ViewMap.jsx");
 /* harmony import */ var _components_ViewCountryData__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ViewCountryData */ "./components/ViewCountryData.jsx");
-/* harmony import */ var _components_CountryListView__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/CountryListView */ "./components/CountryListView.jsx");
+/* harmony import */ var _components_ViewCountryList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ViewCountryList */ "./components/ViewCountryList.jsx");
 /* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! lodash/first */ "./node_modules/lodash/first.js");
 /* harmony import */ var lodash_first__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(lodash_first__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -38390,17 +38381,17 @@ var MapPage = /*#__PURE__*/function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MapPage).call(this, props));
 
+    _this.onSelect = function (country) {
+      var newState = _this.getObjectState(country);
+
+      _this.setState(newState);
+    };
+
     _this.getMapState = function (country) {
       var _ref = [country.latlng, 6],
           center = _ref[0],
           zoom = _ref[1];
       return [center, zoom];
-    };
-
-    _this.onSelect = function (country) {
-      var newState = _this.getObjectState(country);
-
-      _this.setState(newState);
     };
 
     _this.getObjectState = function (country) {
@@ -38443,7 +38434,7 @@ var MapPage = /*#__PURE__*/function (_Component) {
           selected = _this$state.selected;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "view"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ViewCountryData__WEBPACK_IMPORTED_MODULE_4__["ViewCountryData"], viewCountryData), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_CountryListView__WEBPACK_IMPORTED_MODULE_5__["CountryListView1"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ViewCountryData__WEBPACK_IMPORTED_MODULE_4__["ViewCountryData"], viewCountryData), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ViewCountryList__WEBPACK_IMPORTED_MODULE_5__["ViewCountryList"], {
         countries: _data_countries__WEBPACK_IMPORTED_MODULE_2__["countries"],
         selected: selected,
         onSelect: this.onSelect
@@ -38512,11 +38503,22 @@ var Extract = function Extract(props) {
 
   var searchUser = text1.trim().toLowerCase();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (id) {
+    if (id || id && !searchUser) {
       var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
         return user.id === +id;
       });
       updateFiltered(result);
+    } else {
+      if (searchUser) {
+        var _result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
+          return user.login.includes(searchUser);
+        });
+
+        updateFiltered(_result);
+      } else {
+        var _result2 = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"];
+        updateFiltered(_result2);
+      }
     }
   }, [id, searchUser]); // useEffect(() => {
   //     if (id) {
@@ -38573,8 +38575,8 @@ var Extract = function Extract(props) {
 //             filtered: searchId==""?users:users.filter(user => user.login.includes(searchId))
 //         })
 //     };
-//     //cond?case1:case2
-// //view
+//
+//
 //     render() {
 //         let text1 = this.state.text;
 //         let filtered = this.state.filtered;

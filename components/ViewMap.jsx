@@ -15,7 +15,6 @@ class ViewMap extends Component {
         if (this.props !== prevProps) {
             let {center, zoom} = this.props;
             this.yaMap.setCenter(center, zoom);
-            console.log('map update');
         }
     }
 
