@@ -69,18 +69,6 @@ const ViewCountryData = (props) => (
     </div>
 );
 
-ViewCountryData.defaultProps = {
-    code: "",
-    domains: [],
-    population: "",
-    area: "",
-    languages: [],
-    currencies: [],
-    phones: [],
-    subregion: "",
-    flag: ""
-};
-
 ViewCountryData.propTypes = {
     code: PropTypes.string,
     domains: PropTypes.array,
@@ -93,5 +81,16 @@ ViewCountryData.propTypes = {
     flag: PropTypes.string
 }
 
+ViewCountryData.defaultProps = {
+    code: "",
+    domains: [],
+    population: "",
+    area: "",
+    languages: [],
+    currencies: [],
+    phones: [],
+    subregion: "",
+    flag: ""
+};
 
 export {ViewCountryData}

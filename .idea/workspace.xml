@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ad3ebd67-5760-4f4e-8733-185d19565f6f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/CountryListView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ViewCountryList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ViewCountryData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ViewCountryData.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ViewCountryList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ViewCountryList.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/ViewMap.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ViewMap.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/MapPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/MapPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/countries-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/countries-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/extract.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/extract.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +143,7 @@
       <workItem from="1589644207457" duration="599000" />
       <workItem from="1589717527657" duration="2434000" />
       <workItem from="1589813764989" duration="10450000" />
+      <workItem from="1589892695598" duration="2897000" />
     </task>
     <servers />
   </component>

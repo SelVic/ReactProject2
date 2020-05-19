@@ -7,9 +7,7 @@ const ViewCountryList = props => {
         <div className="countries">
             {
                 props.countries.map(c => (
-                    <div key={c.code} onClick={e => props.onSelect(c)}>
-                        <span className="country">{c.name}</span>
-                    </div>
+                    <div key={c.code} onClick={e => props.onSelect(c)}> <span>{c.name}</span> </div>
                 ))
             }
         </div>

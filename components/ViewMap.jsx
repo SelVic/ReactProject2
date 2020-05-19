@@ -11,7 +11,7 @@ class ViewMap extends Component {
         });
     }
 
-    componentDidUpdate(prevProps, prevState, snapshot) {
+    componentDidUpdate(prevProps) {
         if (this.props !== prevProps) {
             let {center, zoom} = this.props;
             this.yaMap.setCenter(center, zoom);

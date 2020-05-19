@@ -17,18 +17,18 @@ const Extract = props => {
                 let result = users.filter(user => user.id === +id)
                 updateFiltered(result);
             }
-            else {
-                if (searchUser) {
-                    let result = users.filter(user => user.login.includes(searchUser))
-                    updateFiltered(result);
-                }
-                else
-                {
-                    let result = users;
-                    updateFiltered(result);
-                }
-            }
-        },[id,searchUser])
+            // else {
+            //     if (searchUser) {
+            //         let result = users.filter(user => user.login.includes(searchUser))
+            //         updateFiltered(result);
+            //     }
+            //     else
+            //     {
+            //         let result = users;
+            //         updateFiltered(result);
+            //     }
+            // }
+        },[id])
     // useEffect(() => {
     //     if (id) {
     //         let result = users.filter(user => user.id === +id)
