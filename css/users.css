@@ -6,7 +6,13 @@
   grid-template-columns: 230px 230px 230px 230px;
   grid-gap: 130px;
 }
+@media screen and (max-width: 900px) {
+  .users {
 
+    grid-template-columns: 230px 230px;
+
+  }
+}
 .user {
   position: relative;
   border: 1px solid #ccc;

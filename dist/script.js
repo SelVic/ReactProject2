@@ -189,7 +189,11 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u0412\u0430\u043B\u044E\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.currencies)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.currencies.map(function (c) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      key: c.code
+    }, c.code, " ", c.name, " ", c.symbol);
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-balance-scale"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -214,17 +218,6 @@ var ViewCountryData = function ViewCountryData(props) {
   }))));
 };
 
-ViewCountryData.defaultProps = {
-  code: "",
-  domains: [],
-  population: "",
-  area: "",
-  languages: [],
-  currencies: [],
-  phones: [],
-  subregion: "",
-  flag: ""
-};
 ViewCountryData.propTypes = {
   code: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string,
   domains: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
@@ -235,6 +228,17 @@ ViewCountryData.propTypes = {
   phones: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].array,
   subregion: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string,
   flag: prop_types__WEBPACK_IMPORTED_MODULE_1__["PropTypes"].string
+};
+ViewCountryData.defaultProps = {
+  code: "",
+  domains: [],
+  population: "",
+  area: "",
+  languages: [],
+  currencies: [],
+  phones: [],
+  subregion: "",
+  flag: ""
 };
 
 
@@ -268,9 +272,7 @@ var ViewCountryList = function ViewCountryList(props) {
       onClick: function onClick(e) {
         return props.onSelect(c);
       }
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      className: "country"
-    }, c.name));
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, c.name), " ");
   }));
 };
 
@@ -357,7 +359,7 @@ var ViewMap = /*#__PURE__*/function (_Component) {
     }
   }, {
     key: "componentDidUpdate",
-    value: function componentDidUpdate(prevProps, prevState, snapshot) {
+    value: function componentDidUpdate(prevProps) {
       if (this.props !== prevProps) {
         var _this$props2 = this.props,
             center = _this$props2.center,
@@ -6090,7 +6092,10 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-
+ //доделать цсс в картах
+//поправить зум
+//@media
+//
 
 var App = /*#__PURE__*/function (_Component) {
   _inherits(App, _Component);
@@ -38501,41 +38506,27 @@ var Extract = function Extract(props) {
       text1 = _useState4[0],
       updateText = _useState4[1];
 
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+      _useState6 = _slicedToArray(_useState5, 2),
+      firstRun = _useState6[0],
+      updateRun = _useState6[1];
+
   var searchUser = text1.trim().toLowerCase();
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (id || id && !searchUser) {
+    if (id && firstRun === false) {
+      updateRun(true);
       var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
         return user.id === +id;
       });
       updateFiltered(result);
     } else {
-      if (searchUser) {
-        var _result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
-          return user.login.includes(searchUser);
-        });
-
-        updateFiltered(_result);
-      } else {
-        var _result2 = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"];
-        updateFiltered(_result2);
-      }
-    }
-  }, [id, searchUser]); // useEffect(() => {
-  //     if (id) {
-  //         let result = users.filter(user => user.id === +id)
-  //         updateFiltered(result);
-  //     }
-  //      else
-  // },[id, searchUser])
-
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (searchUser) {
-      var result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
+      var _result = _users_js__WEBPACK_IMPORTED_MODULE_2__["users"].filter(function (user) {
         return user.login.includes(searchUser);
       });
-      updateFiltered(result);
+
+      updateFiltered(_result);
     }
-  }, [searchUser]);
+  }, [id, searchUser]);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {

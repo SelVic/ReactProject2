@@ -10,39 +10,21 @@ const Extract = props => {
         let {id} = qs.parse(location.search, {ignoreQueryPrefix: true});
         let [filtered, updateFiltered] = useState(users)
         let [text1, updateText] = useState("");
+        let [firstRun, updateRun] = useState(false);
         let searchUser = text1.trim().toLowerCase();
 
         useEffect(() => {
-            if (id || (id && !searchUser)) {
-                let result = users.filter(user => user.id === +id)
-                updateFiltered(result);
-            }
-            // else {
-            //     if (searchUser) {
-            //         let result = users.filter(user => user.login.includes(searchUser))
-            //         updateFiltered(result);
-            //     }
-            //     else
-            //     {
-            //         let result = users;
-            //         updateFiltered(result);
-            //     }
-            // }
-        },[id])
-    // useEffect(() => {
-    //     if (id) {
-    //         let result = users.filter(user => user.id === +id)
-    //         updateFiltered(result);
-    //     }
-    //      else
-    // },[id, searchUser])
+        if (id && firstRun === false) {
+            updateRun(true);
+            let result = users.filter(user => user.id === +id)
+            updateFiltered(result);
+        }
+        else {
+            let result = users.filter(user => user.login.includes(searchUser))
+            updateFiltered(result);
+        }
+        },[id, searchUser])
 
-        useEffect(() => {
-            if (searchUser) {
-                let result = users.filter(user => user.login.includes(searchUser))
-                updateFiltered(result);
-            }
-        },[searchUser])
         return (
         <div className="container">
             <input className="input-style" type="text" value = {text1} onChange={e => updateText(e.currentTarget.value)} />

@@ -44,7 +44,7 @@ const ViewCountryData = (props) => (
                 <div>
                     <div className="view-data-block">
                         <div className="view-data-title">Валюта</div>
-                        <div className="view-data-value">{props.currencies}</div>
+                        <div className="view-data-value">{props.currencies.map(c => <span key={c.code}>{c.code} {c.name} {c.symbol}</span>)}</div>
                     </div>
                     <i className="view-data-icon fa fa-balance-scale"/>
                 </div>
@@ -79,7 +79,7 @@ ViewCountryData.propTypes = {
     phones: PropTypes.array,
     subregion: PropTypes.string,
     flag: PropTypes.string
-}
+};
 
 ViewCountryData.defaultProps = {
     code: "",
