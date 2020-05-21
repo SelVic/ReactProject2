@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad3ebd67-5760-4f4e-8733-185d19565f6f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/ViewCountryData.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ViewCountryData.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/users.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/users.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/script.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/script.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/extract.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/extract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/countries-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/countries-styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/map-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/map-style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +140,7 @@
       <workItem from="1589717527657" duration="2434000" />
       <workItem from="1589813764989" duration="10450000" />
       <workItem from="1589892695598" duration="10434000" />
+      <workItem from="1590086802973" duration="632000" />
     </task>
     <servers />
   </component>
