@@ -38,7 +38,9 @@
     grid-gap: 20px;
     padding-bottom: 20px;
 }
-
+.view-grid-data-new{
+    
+}
 
 .view-data-grid > div {
     background: linear-gradient(90deg, rgba(64,249,244,1) 0%, rgba(146,125,255,1) 0%);
