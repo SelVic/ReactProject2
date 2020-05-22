@@ -40,7 +40,7 @@
 }
 .view-grid-data-new{
     background-color: white;
-    grid-template-rows: 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr;*/
 }
 
 .view-data-grid > div {
