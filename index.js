@@ -5,10 +5,7 @@ import {Cycle1} from "./scripts/timer.js";
 import {Extract} from "./scripts/extract.js";
 import {MapPage} from "./pages/MapPage.jsx";
 
-//доделать цсс в картах
-//поправить зум
-//@media
-//
+
 class App extends Component {
     render() {
         return (
