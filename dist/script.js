@@ -6092,10 +6092,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
- //доделать цсс в картах
-//поправить зум
-//@media
-//
+
 
 var App = /*#__PURE__*/function (_Component) {
   _inherits(App, _Component);
