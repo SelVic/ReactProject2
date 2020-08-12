@@ -149,7 +149,7 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u041A\u043E\u0434 \u0441\u0442\u0440\u0430\u043D\u044B"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.code)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.code || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-book"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -157,7 +157,7 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u041E\u0441\u043D\u043E\u0432\u043D\u043E\u0439 \u0434\u043E\u043C\u0435\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.domains)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.domains || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-at"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -165,7 +165,7 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u041D\u0430\u0441\u0435\u043B\u0435\u043D\u0438\u0435"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.population)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.population || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-address-card"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -173,7 +173,7 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u0422\u0435\u0440\u0440\u0438\u0442\u043E\u0440\u0438\u044F"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.area)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.area || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-globe"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -181,19 +181,19 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u042F\u0437\u044B\u043A"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.languages)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.languages || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-comments"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-title"
   }, "\u0412\u0430\u043B\u044E\u0442\u0430"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "view-data-value"
+    className: "view-data-value-currency"
   }, props.currencies.map(function (c) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
       key: c.code
     }, c.code, " ", c.name, " ", c.symbol);
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }) || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-balance-scale"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -201,7 +201,7 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u0422\u0435\u043B\u0435\u0444\u043E\u043D\u043D\u044B\u0439 \u043A\u043E\u0434"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.phones)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.phones || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-fax"
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-block"
@@ -209,7 +209,7 @@ var ViewCountryData = function ViewCountryData(props) {
     className: "view-data-title"
   }, "\u0420\u0435\u0433\u0438\u043E\u043D"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-value"
-  }, props.subregion)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, props.subregion || "Unknown")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "view-data-icon fa fa-university"
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "view-data-flag"
@@ -267,12 +267,15 @@ var ViewCountryList = function ViewCountryList(props) {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "countries"
   }, props.countries.map(function (c) {
+    c = c || {};
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       key: c.code,
       onClick: function onClick(e) {
         return props.onSelect(c);
       }
-    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, c.name), " ");
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      className: "countries-item"
+    }, c.name), " ");
   }));
 };
 

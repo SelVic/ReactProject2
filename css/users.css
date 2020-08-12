@@ -3,7 +3,7 @@
 .users {
   margin-bottom: 50px;
   display: grid;
-  grid-template-columns: 230px 230px 230px 230px;
+  grid-template-columns: 230px 230px 230px 230px 230px;
   grid-gap: 130px;
 }
 @media screen and (max-width: 900px) {

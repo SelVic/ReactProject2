@@ -1,12 +1,16 @@
 .countries {
     overflow-y: auto;
-    height: 819px;
+    height: 900px;
     user-select: none;
     background-color: beige;
 }
-.country-item{
+.countries-item{
+    padding: 4px 8px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 1px;
+}
+.countries-item:hover{
+    background-color: #C2554F;
+}
 
-}
-.country-item:hover{
-    color: #C2554F;
-}

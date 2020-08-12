@@ -6,9 +6,13 @@ const ViewCountryList = props => {
     return (
         <div className="countries">
             {
-                props.countries.map(c => (
-                    <div key={c.code} onClick={e => props.onSelect(c)}> <span>{c.name}</span> </div>
-                ))
+                props.countries.map(c => {
+                    c=c||{};
+                    return(
+                    <div key={c.code}
+                         onClick={e => props.onSelect(c)}> <span className="countries-item">{c.name}</span> </div>
+                )
+                })
             }
         </div>
     )
