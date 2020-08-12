@@ -2,8 +2,11 @@
     overflow-y: auto;
     height: 819px;
     user-select: none;
-    background-color: white;
+    background-color: beige;
 }
 .country-item{
 
+}
+.country-item:hover{
+    color: #C2554F;
 }
