@@ -47,8 +47,6 @@
     padding: 30px;
     color: floralwhite;
     display: flex;
-    width: 100px;
-    height: 70px;
 }
 
 .view-data-flag {
@@ -59,10 +57,8 @@
     overflow: hidden;
 }
 .view-data-block {
-    height: 100%;
     display: grid;
     grid-template-rows: auto 1fr;
-
 }
 .view-data-title {
     font-size: 14px;
@@ -71,11 +67,10 @@
 
 .view-data-value {
     margin-top: 2px;
-    font-size: 18px;
+    font-size: 20px;
 }
 .view-data-value-currency{
-    font-size : 18px;
-    transition: font-size;
+    font-size : 16px;
 }
 .view-data-icon.fa {
     font-size: 30px;

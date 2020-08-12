@@ -5,12 +5,14 @@
     background-color: beige;
 }
 .countries-item{
+    border: 3px black;
     padding: 4px 8px;
     cursor: pointer;
     display: flex;
     margin-bottom: 1px;
 }
-.countries-item:hover{
+.countries-item:hover,
+.countries-item:active{
     background-color: #C2554F;
 }
 

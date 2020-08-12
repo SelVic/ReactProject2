@@ -272,10 +272,9 @@ var ViewCountryList = function ViewCountryList(props) {
       key: c.code,
       onClick: function onClick(e) {
         return props.onSelect(c);
-      }
-    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      },
       className: "countries-item"
-    }, c.name), " ");
+    }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, c.name), " ");
   }));
 };
 

@@ -10,7 +10,7 @@ const ViewCountryList = props => {
                     c=c||{};
                     return(
                     <div key={c.code}
-                         onClick={e => props.onSelect(c)}> <span className="countries-item">{c.name}</span> </div>
+                         onClick={e => props.onSelect(c)} className="countries-item"> <span>{c.name}</span> </div>
                 )
                 })
             }
