@@ -4,7 +4,7 @@ import {users} from "./users.js";
 import {User} from "../components/User.jsx";
 import qs from "qs"
 import {useLocation} from "@reach/router";
-//
+
 const Extract = props => {
         const location = useLocation();
         let {id} = qs.parse(location.search, {ignoreQueryPrefix: true});
