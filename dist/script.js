@@ -38392,7 +38392,7 @@ var MapPage = /*#__PURE__*/function (_Component) {
     };
 
     _this.getMapState = function (country) {
-      var _ref = [country.latlng, 6],
+      var _ref = [country.latlng, 8],
           center = _ref[0],
           zoom = _ref[1];
       return [center, zoom];

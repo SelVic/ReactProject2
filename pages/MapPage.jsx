@@ -20,7 +20,7 @@ class MapPage extends Component {
     };
 
     getMapState = (country) => {
-        let [center, zoom] = [country.latlng, 6];
+        let [center, zoom] = [country.latlng, 8];
         return [center, zoom]
     };
 

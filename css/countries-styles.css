@@ -1,11 +1,13 @@
 .countries {
     overflow-y: auto;
-    height: 900px;
+    height: 1296px;
     user-select: none;
     background-color: beige;
+    border-radius: 8px;
+    border: 1px solid #444444;
 }
 .countries-item{
-    border: 3px black;
+    border: 1px solid #cccccc;
     padding: 4px 8px;
     cursor: pointer;
     display: flex;
